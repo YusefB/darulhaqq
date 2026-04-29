@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel/static';
 import sitemap from '@astrojs/sitemap';
 import pagefind from 'astro-pagefind';
+import rehypeSlug from 'rehype-slug';
 
 export default defineConfig({
   site: 'https://darulhaqq.vercel.app',
@@ -13,4 +14,7 @@ export default defineConfig({
     sitemap(),
     pagefind(),
   ],
+  markdown: {
+    rehypePlugins: [rehypeSlug],
+  },
 });
