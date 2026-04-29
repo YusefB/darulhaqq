@@ -1,30 +1,38 @@
 ---
-title: "The Ashʿarī & Māturīdī schools are mainstream Sunnism"
-arabicTitle: "العقيدة الأشعرية والماتريدية هي عقيدة أهل السنة"
+title: "The Ashʿarī and Māturīdī schools"
+arabicTitle: "العقيدة الأشعرية والماتريدية"
 order: 5
-summary: "From the 4th century Hijri onward, the ʿaqīdah of the overwhelming majority of Sunnī Muslims — across all four madhāhib of fiqh — has been Ashʿarī or Māturīdī. To call these schools deviant is to call the four-century mainline of Sunnism deviant."
-updated: "2026-04-28"
+summary: "The Salafī position holds that the Ashʿarī and Māturīdī schools introduced a kalām-based methodology that departs from the textual ʿaqīdah of the Salaf, and is therefore not a faithful transmission of the Salaf's creed. The classical Sunnī position holds that these two schools systematically articulated the creed the Salaf affirmed, in the technical vocabulary required to defend it against the philosophical challenges of the 4th Hijri century onward, and that the chain of mainline Sunnī ʿaqīdah teaching since then has run through them. The disagreement is over what kind of continuity with the Salaf counts."
+updated: "2026-04-29"
 sources:
+  - author: "Islam Q&A (islamqa.info)"
+    site: "IslamQA.info"
+    sourceType: "salafi"
+    url: "https://islamqa.info/en/answers/226290"
+    excerpt: "Most of the later Ash'aris do not adhere to the madhhab of Abu'l-Hasan al-Ash'ari; rather they are influenced by many of the principles of the Jahamis and Mu'tazilah, and even of the philosophers, and they differ with al-Ash'ari regarding many of his views. They deny the divine attributes of rising over the Throne (istiwaa'), being exalted, coming down to the lowest heaven (in the last third of the night), the Hand, the Eye, the Foot, and speech. The phrase Ahl as-Sunnah may be used in contrast to the people of bid'ah (innovation). In this case, what is meant is the people of the Sunnah in the true sense; that only includes those who adhere to sound belief, namely the salaf and ahl al-hadith. In this case, the phrase does not include the Ash'aris or others who mix their theological principles ('ilm al-kalaam) with some innovated principles, because they differ with Ahl as-Sunnah regarding many principles and issues."
+    accessed: "2026-04-29"
   - author: "Shaykh Faraz Rabbani"
     site: "SeekersGuidance"
+    sourceType: "classical-sunni"
     url: "https://seekersguidance.org/answers/islamic-belief/the-asharis-maturidis-standards-of-mainstream-sunni-beliefs/"
     excerpt: "Yes, there was historically a group of Hanbalis who were quite anti-Ash'ari. Some of them were simply wary of the nuances of scholastic theology (kalam) and feared the impact it may have had on the purity of the beliefs within the Qur'an and Sunna. However, there was also a tendency–certainly not predominant–towards excessive literalism in beliefs and even towards anthropomorphism (affirmation of human attributes to Allah). This is why the scholars considered the prevalent way of the Ash'aris and Maturidis to be the 'standard' by which anyone's beliefs would be judged. If these beliefs–whether referred to as 'Athari aqida' or anything else–corresponded in content and implications to the beliefs acceptable to the mainstream Sunni schools, then such beliefs were accepted as being within the framework of Ahl al-Sunna; and to the extent that they didn't, in content or implications, they weren't."
     accessed: "2026-04-28"
   - author: "Ustadh Salman Younas"
     site: "SeekersGuidance"
+    sourceType: "classical-sunni"
     url: "https://seekersguidance.org/answers/islamic-belief/does-god-have-a-sex-are-asharis-and-maturidis-disbelievers/"
     excerpt: "The Ash'ari and Maturidi schools have served as the standard expression of orthodox creed among Sunni scholars for over a millennium. The creed authored by Imam al-Tahawi does not diverge significantly from either, and, like the Maturidi school, it represents the belief of the early Hanafi scholars, namely Imam Abu Hanifa, Qadi Abu Yusuf, and Imam Muhammad. As you have indicated, the process of codifying any tradition, whether it be related to creed or law or spirituality, arises gradually and within the context of broader social and intellectual currents. From this perspective, the Ash'ari and Maturidi schools are rightly viewed as emerging in defense of orthodox creed against the arguments of both non-Muslims and those Muslim sects whose understandings were seen as swerving from the way of the pious predecessors (salaf)."
     accessed: "2026-04-28"
 ---
 
-### The historical reality
+### The Salafī position
 
-Imam Abū al-Ḥasan al-Ashʿarī (d. 324 AH) and Imam Abū Manṣūr al-Māturīdī (d. 333 AH) systematized the ʿaqīdah that the Companions and the Salaf affirmed in the language and against the challenges of their own day. From them, the chain of transmission runs through Imam al-Bāqillānī, al-Juwaynī, al-Ghazālī, al-Rāzī, al-Āmidī, al-Bayḍāwī, al-Ījī, al-Taftāzānī, and al-Jurjānī — every one of them a pillar of mainstream Sunnism, none of them a fringe figure. The Māturīdī chain runs through al-Nasafī, al-Sābūnī, al-Bazdawī, and the Ottoman ʿaqīdah tradition.
+The Salafī school accepts that Imam Abū al-Ḥasan al-Ashʿarī (d. 324 AH) is a major historical figure and that he ended his life on the Atharī (text-based) creed of Imam Aḥmad ibn Ḥanbal — citing his late work *al-Ibāna ʿan Uṣūl al-Diyāna*. What it rejects is the kalām-based methodology that subsequent Ashʿarī and Māturīdī scholars (al-Bāqillānī, al-Juwaynī, al-Ghazālī, al-Rāzī, al-Taftāzānī, al-Jurjānī) developed. On the Salafī reading, that methodology — using the conceptual vocabulary of the philosophers and *mutakallimūn* to defend the divine attributes — introduced ta'wīl, *tafwīḍ al-maʿnā*, and other interpretive techniques that the Salaf did not employ, and produced positions on the divine attributes (especially on direction, place, and the literal/non-literal status of "hand," "face," "istiwāʾ," "nuzūl") that depart from the apparent reading of the texts.
 
-### What the objection misses
+### The classical Sunnī position
 
-The Salafī claim is that these two schools are deviations from the way of the Salaf. But the way of the Salaf was not a written manual; it was a creedal stance — affirming what Allāh affirms of Himself, denying anthropomorphism, and refusing the speculative excesses of the philosophers and the Muʿtazila. That stance is *what the Ashʿarīs and Māturīdīs systematized*. The four madhāhib's fiqh manuals — Ḥanafī, Mālikī, Shāfiʿī, Ḥanbalī — are taught alongside Ashʿarī or Māturīdī ʿaqīdah in every classical curriculum at al-Azhar, Deoband, the Ḥaramayn before the modern era, the Ottoman institutions, and Mauritanian and Yemeni traditional schools.
+The classical Sunnī position is that the way of the Salaf was a creedal *stance* — affirming what Allāh affirms of Himself, denying anthropomorphism, refusing the speculative excesses of philosophers and Muʿtazila — rather than a single methodology written down in advance. That stance is what the Ashʿarī and Māturīdī schools systematized, in the language and against the challenges of their own time. The chain of transmission is not in dispute: from al-Ashʿarī and al-Māturīdī through al-Bāqillānī, al-Juwaynī, al-Ghazālī, al-Rāzī, al-Āmidī, al-Bayḍāwī, al-Ījī, al-Taftāzānī, al-Jurjānī, al-Sanūsī — every one of them an established Sunnī authority taught alongside the four madhāhib's fiqh manuals at al-Azhar, in the Ḥaramayn before the modern era, in the Ottoman institutions, in Mauritanian and Yemeni traditional schools, and in Deobandī and Barelvī curricula in South Asia. To call these two schools deviant is to call the four-century mainline of formally-trained Sunnī scholarship deviant.
 
-### What the sources below say
+### Where the disagreement actually sits
 
-The answers below trace the historical lineage and the textual basis.
+Both sides accept the ʿaqīdah of the Salaf as the standard. They disagree on what counts as faithful transmission of it. The Salafī school argues that fidelity to the Salaf requires reproducing their *vocabulary* — affirming attributes in apparent terms with *bilā kayf* — and that introducing the technical apparatus of kalām is a departure however well-intentioned. The classical school argues that fidelity to the Salaf requires preserving their *creedal stance* against new challenges, even at the cost of new vocabulary, and that the alternative — refusing kalām — would have left philosophical and rationalist attacks on the religion unanswered.
