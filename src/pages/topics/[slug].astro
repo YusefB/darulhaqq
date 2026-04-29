@@ -20,7 +20,7 @@ const { title, arabicTitle, summary, sources, updated } = topic.data;
 <Base title={title} description={summary} compactHeader={true}>
   <p class="crumb"><a href="/">Topics</a> &rsaquo; {title}</p>
 
-  {arabicTitle && <p class="arabic topic-ar">{arabicTitle}</p>}
+  {arabicTitle && <p class="arabic topic-ar" lang="ar" dir="rtl">{arabicTitle}</p>}
   <h2>{title}</h2>
   <p class="summary">{summary}</p>
 
