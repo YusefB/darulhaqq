@@ -2,24 +2,31 @@
 title: "Ibn Taymiyyah and the ʿaqīdah of the Salaf"
 arabicTitle: "ابن تيمية وعقيدة السلف"
 order: 3
-summary: "Ibn Taymiyyah's ʿaqīdah departs from the consensus of the Ashʿarī and Māturīdī schools on the divine attributes — particularly on direction, place, and the literal interpretation of mutashābih texts. The mainstream of the four madhāhib has historically critiqued these positions while affirming his services to ḥadīth and refutation of philosophy."
-updated: "2026-04-28"
+summary: "Ibn Taymiyya (d. 728 AH) is the foundational scholarly authority of the Salafī movement; his readings of the divine attributes, of tawassul, and of the relationship between revealed text and rational interpretation departed from the consensus of the Ashʿarī and Māturīdī schools that had been mainstream Sunnism for four centuries before him. The Salafī position holds that he recovered the methodology of the Salaf themselves; the classical Sunnī position holds that he introduced specific creedal claims that the Salaf had not affirmed and that the four madhāhib's mainline scholars critiqued."
+updated: "2026-04-29"
 sources:
+  - author: "Islam Q&A (islamqa.info)"
+    site: "IslamQA.info"
+    sourceType: "salafi"
+    url: "https://islamqa.info/en/answers/301643"
+    excerpt: "The approach of the salaf – the Sahaabah and Taabi'een (may Allah be pleased with them) – was to affirm the attributes that Allah affirmed for Himself or His Messenger (blessings and peace of Allah be upon him) affirmed for Him, without likening or comparing them (to the attributes of any of His creation), without interpreting them in a manner other than the apparent meaning, and without denying any of the divine attributes. Interpreting the Hand of Allah as referring to His power or might is the view of the Jahamis and Mu'tazilah, and also of the later Ash'aris. The Hand of Allah is one of His attributes that is befitting to His majesty and perfection, and cannot be likened to the attributes of created beings."
+    accessed: "2026-04-29"
   - author: "Ustadh Salman Younas"
     site: "SeekersGuidance"
+    sourceType: "classical-sunni"
     url: "https://seekersguidance.org/answers/general-counsel/can-you-recommend-a-book-on-ibn-taymiyya-to-read/"
     excerpt: "It is difficult for me to recommend a single book on Shaykh Taqi al-Din ibn Taymiyya given the degree of controversy surrounding him. Ibn Hajar al-`Asqalani wrote a biography of him that gathered both the positive and negative attitudes that scholars held in his al-Durar al-Kamina (1:144-160), which is perhaps worth a read. Additionally. Imam al-Dhahabi has a monograph entitled al-Durra al-Yatimiyya fi al-Sira al-Taymiyya. Both these works, however, are in Arabic. I do not know of many works that comprehensively treat the positions held by Shaykh Ibn Taymiyya in the English language. Shaykh Gibril Haddad's translation of Ibn Jahbal al-Kilabi's work entitled \"The Refutation of Him Who Attributes Direction to Allah\" is perhaps a work you may look into further. The text itself is a refutation of a specific issue, but Shaykh Gibril discusses a number of other controversial positions that Shaykh Ibn Taymiyya held in aspects of creed and law."
     accessed: "2026-04-28"
 ---
 
-### What the dispute is actually about
+### The Salafī position
 
-The disagreement is not over whether Ibn Taymiyyah was a major scholar — he was, in ḥadīth and refutation of falsafa. The disagreement is over specific ʿaqīdah positions where he broke with the Ashʿarī and Māturīdī consensus that had been mainstream Sunnism for four centuries before him: affirming direction (*jihah*) for Allāh, taking certain mutashābih texts (e.g., *istiwāʾ*, *yad*, *nuzūl*) on a literal-but-bilā kayf basis in a way the earlier scholars rejected, and his treatment of tawassul and ziyārah.
+The Salafī school regards Ibn Taymiyya as the primary architect of the methodology it identifies with the Salaf. His foundational creedal text, *al-ʿAqīdah al-Wāsiṭiyya*, sets out the position that Allāh's attributes — including those that, in apparent linguistic meaning, would parallel attributes of created things — are to be affirmed in their apparent meaning, with the qualification "*bilā kayf*" (without [knowing] the modality), and that ta'wīl (interpretive reading away from the apparent meaning) is *taḥrīf* (distortion) wherever the text does not internally signal a non-literal reading. On tawassul, Ibn Taymiyya's *Qāʿidah Jalīlah fī al-Tawassul wa-l-Wasīla* restricts permissible tawassul to three forms (through Allāh's names and attributes, through one's own good deeds, and through a living person's duʿāʾ) and rejects tawassul through the rank of the deceased Prophet ﷺ or righteous people as an unsanctioned innovation. On dialectical theology, his *Darʾ Taʿāruḍ al-ʿAql wa-l-Naql* argues that kalām is a blameworthy discipline that introduces philosophical confusion into the simple textual creed of the Salaf.
 
-### How the mainline scholars responded
+### The classical Sunnī position
 
-Imam Taqī al-Dīn al-Subkī, Ibn Ḥajar al-Haytamī, and the muḥaddith al-Dhahabī (himself a student of Ibn Taymiyyah, in his later *al-Naṣīḥa al-Dhahabiyya*) all critiqued specific positions while preserving respect for the man. The point traditional Sunnism makes is not that he should be cursed, but that the four madhāhib do not transmit ʿaqīdah from him; they transmit it from the Ashʿarī and Māturīdī manuals.
+The classical Sunnī position holds that the methodology of the Salaf cannot be identified with any single later scholar's reconstruction of it, and that Ibn Taymiyya's specific creedal claims — particularly the affirmation of *jihah* (direction) for Allāh and his rejection of mainstream tawassul and ziyārah — depart from positions that the four madhāhib's mainline scholars had transmitted for four centuries before him. Imam Taqī al-Dīn al-Subkī's *al-Sayf al-Ṣaqīl* and *al-Durra al-Muḍiyyah*, Ibn Ḥajar al-Haytamī's *al-Fatāwā al-Ḥadīthiyyah*, and the muḥaddith al-Dhahabī's *al-Naṣīḥa al-Dhahabiyya* (a personal letter from a former student of Ibn Taymiyya) all critique specific positions while preserving respect for him as a major scholar of ḥadīth and an effective refuter of Greek philosophy. The point is not that Ibn Taymiyya was outside the Sunnī fold — the four madhāhib's scholars did not declare him so — but that the four madhāhib do not transmit their ʿaqīdah from him; they transmit it from the Ashʿarī and Māturīdī manuals.
 
-### What the sources below say
+### Where the disagreement actually sits
 
-The answers below set out the specific ʿaqīdah points and the classical Sunnī response to each.
+The disagreement is over the relationship between later scholarly authority and "the methodology of the Salaf." The Salafī school argues that Ibn Taymiyya's textual literalism reproduces the Salaf's methodology more faithfully than the kalām-based readings of al-Ashʿarī, al-Māturīdī, al-Bāqillānī, al-Juwaynī, al-Ghazālī, al-Rāzī, and the chain of mainline Sunnī theologians who followed them. The classical Sunnī school argues the reverse: that the four-century continuity of Ashʿarī/Māturīdī ʿaqīdah teaching across the institutions of mainstream Sunnism (al-Azhar, the Ottoman ʿulamāʾ, the Mauritanian and Yemeni schools, the four madhāhib's curricula) is itself the operative continuity with the Salaf, and that Ibn Taymiyya's reading is a 7th–8th-century reconstruction that diverged from that continuity on specific creedal points.
