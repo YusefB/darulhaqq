@@ -42,6 +42,22 @@ const isActive = (href: string): boolean => {
       <span class="bar"></span>
     </button>
 
+    <div class="patch-flags" aria-label="In solidarity">
+      <svg class="flag" viewBox="0 0 32 21" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flag of Palestine">
+        <rect width="32" height="7" y="0" fill="#000000"/>
+        <rect width="32" height="7" y="7" fill="#ffffff"/>
+        <rect width="32" height="7" y="14" fill="#009639"/>
+        <polygon points="0,0 11,10.5 0,21" fill="#ce1126"/>
+        <rect width="32" height="21" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="0.5"/>
+      </svg>
+      <svg class="flag" viewBox="0 0 100 67" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahāda flag">
+        <rect width="100" height="67" fill="#ffffff"/>
+        <text x="50" y="28" font-family="Amiri, 'Noto Naskh Arabic', serif" font-size="14" font-weight="700" text-anchor="middle" fill="#000000">لا إله إلا الله</text>
+        <text x="50" y="50" font-family="Amiri, 'Noto Naskh Arabic', serif" font-size="14" font-weight="700" text-anchor="middle" fill="#000000">محمد رسول الله</text>
+        <rect width="100" height="67" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+      </svg>
+    </div>
+
     <aside class="sidebar" id="sidebar" aria-label="Site sections">
       <div class="brand-block">
         <a href="/" class="brand-link">
@@ -195,6 +211,27 @@ const isActive = (href: string): boolean => {
         padding: 0;
       }
       .menu-toggle .bar { width: 18px; height: 2px; background: var(--navy); display: block; }
+
+      /* === Solidarity flag patches (top-right corner) === */
+      .patch-flags {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+        display: flex;
+        gap: 6px;
+        z-index: 25;
+        pointer-events: none;
+      }
+      .patch-flags .flag {
+        width: 42px;
+        height: 28px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        display: block;
+      }
+      @media (max-width: 600px) {
+        .patch-flags { top: 10px; right: 10px; gap: 4px; }
+        .patch-flags .flag { width: 34px; height: 23px; }
+      }
 
       .scrim {
         position: fixed;
