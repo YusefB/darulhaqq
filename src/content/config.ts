@@ -11,10 +11,11 @@ const topics = defineCollection({
     summary: z.string(),
     sources: z.array(z.object({
       author: z.string(),
-      site: z.enum(['SeekersGuidance', 'IslamQA.org', 'Ask Imam', 'hadithanswers.com']),
-      url: z.string().url(),
+      site: z.string(),                                                          // free text — name of the source publication or site
+      sourceType: z.enum(['classical-sunni', 'salafi', 'classical-text', 'academic']).optional(),
+      url: z.string().url().optional(),                                          // optional: classical-text citations may not have a URL
       excerpt: z.string(),
-      accessed: ISO_DATE,
+      accessed: ISO_DATE.optional(),
     })).min(1),
     updated: ISO_DATE,
   }),

@@ -1,17 +1,20 @@
 ---
 interface Props {
   author: string;
-  site: 'SeekersGuidance' | 'IslamQA.org' | 'Ask Imam' | 'hadithanswers.com';
-  url: string;
+  site: string;
+  url?: string;
   excerpt: string;
+  sourceType?: 'classical-sunni' | 'salafi' | 'classical-text' | 'academic';
 }
 
-const { author, site, url, excerpt } = Astro.props;
+const { author, site, url, excerpt, sourceType } = Astro.props;
+const typeClass = sourceType ? `type-${sourceType}` : '';
 ---
-<figure class="quote">
+<figure class={`quote ${typeClass}`}>
   <blockquote>{excerpt}</blockquote>
   <figcaption>
-    — {author}, <a href={url} rel="noopener external">{site}</a>
+    — {author},{' '}
+    {url ? <a href={url} rel="noopener external">{site}</a> : <span>{site}</span>}
   </figcaption>
 </figure>
 
@@ -21,6 +24,15 @@ const { author, site, url, excerpt } = Astro.props;
     border-left: 3px solid var(--gold);
     padding: 12px 16px;
     margin: 16px 0;
+  }
+  /* Salafī sources: subtly different left rule (slate) so the side is clear at a glance */
+  .quote.type-salafi {
+    border-left-color: #6b7280;
+    background: #fbfaf6;
+  }
+  /* Classical text without URL: neutral rule */
+  .quote.type-classical-text {
+    border-left-color: var(--ink-tertiary);
   }
   blockquote {
     font-size: 15px;
