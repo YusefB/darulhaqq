@@ -30,6 +30,13 @@ sources:
     excerpt: |
       Whosoever constantly recites the words "Ya Hayyu Ya Qayyum, La ilaha illa anta, bi-rahmatika astaghith" forty times daily, his heart will attain life. [Ibn al-Qayyim, Madarij al-Salikin, 1:446, reporting the prescription of Shaykh al-Islam Ibn Taymiyya.] The wahhabisrefuted article uses this passage to expose an internal inconsistency in the IslamQA position: IslamQA criticises the practice of reciting dhikr in prescribed numbers as an innovation lacking Prophetic sanction, yet this very practice — assigning a specific number (forty) to a specific formula — was recommended by Ibn Taymiyya himself, the foundational authority of the Salafi school, on grounds of spiritual benefit. The article notes that the prescribed dhikr is not established from the Prophet nor the pious Salaf, and that Ibn Taymiyya's recommendation of it illustrates that even leading Salafi authorities accepted prescribed forms of dhikr not explicitly commanded in hadith.
     accessed: "2026-04-29"
+  - author: "Shaykh Faraz Rabbani"
+    site: "SeekersGuidance"
+    sourceType: "classical-sunni"
+    url: "https://seekersguidance.org/answers/hanafi-fiqh/did-the-great-companion-abdullah-ibn-masud-prohibit-group-dhikr/"
+    excerpt: |
+      "This narration from Ibn Masʿūd (Allah be pleased with him) needs exposition in terms of its chain of narrations and who of the hadith masters transmitted it in their works, and I have seen evidence that would disprove its being established from Ibn Masʿūd." The article transmits a contrary report of Ibn Masʿūd's own practice: "Those who think that Abdullah used to prohibit the dhikr! I never sat with Abdullah in a gathering save that he did dhikr in it." It further notes Imam al-Bazzāzī's reading — that if Ibn Masʿūd ever broke up a particular gathering, it was because the participants had come to treat group dhikr as a specifically enjoined religious obligation (a blameworthy innovation in attribution), not because he objected to the practice of dhikr in gatherings itself under the general Qurʾānic command to remember Allāh in any permitted way.
+    accessed: "2026-04-30"
 ---
 
 ### The Salafī position
