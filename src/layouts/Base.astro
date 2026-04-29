@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** when true, renders a smaller H1 (used on inner pages) */
+  compactHeader?: boolean;
+}
+
+const { title, description, compactHeader = false } = Astro.props;
+const fullTitle = title === 'Dār al-Ḥaqq' ? title : `${title} — Dār al-Ḥaqq`;
+const pageDescription = description ?? 'Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="site-head">
+      <div class="shell">
+        <div class="arabic head-ar">دار الحق</div>
+        <a class="brand" href="/">
+          <h1 class={compactHeader ? 'compact' : ''}>Dār al-Ḥaqq</h1>
+        </a>
+        {!compactHeader && (
+          <p class="tagline">Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.</p>
+        )}
+        <nav class="topnav">
+          <a href="/">Topics</a>
+          <a href="/sources">Sources</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
+      <div class="pattern" aria-hidden="true"></div>
+    </header>
+
+    <main class="shell content">
+      <slot />
+    </main>
+
+    <footer class="site-foot">
+      <div class="shell">
+        <p class="duaa"><em>Allāhumma arinā al-ḥaqqa ḥaqqan wa-rzuqnā ittibāʿahu, wa-arinā al-bāṭila bāṭilan wa-rzuqnā ijtinābahu.</em></p>
+        <p class="suggest"><a href="mailto:hello@darulhaqq.org?subject=Suggest a topic">Suggest a topic</a></p>
+      </div>
+    </footer>
+
+    <style>
+      .site-head { padding-top: 36px; }
+      .head-ar { font-size: 22px; color: var(--navy); margin-bottom: 4px; font-weight: 700; }
+      .brand { text-decoration: none; }
+      .brand h1 { color: var(--navy); margin: 0 0 4px; }
+      .brand h1.compact { font-size: 22px; }
+      .tagline { font-style: italic; color: var(--ink-secondary); font-size: 15px; margin: 0 0 14px; }
+      .topnav { font-family: var(--sans); font-size: 13px; letter-spacing: 0.04em; }
+      .topnav a { color: var(--navy-link); margin-right: 16px; text-decoration: underline; }
+      .pattern {
+        height: 4px;
+        margin-top: 14px;
+        background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 6px, transparent 6px, transparent 12px);
+      }
+      .content { padding: 28px 24px 48px; }
+      .site-foot {
+        border-top: 1px solid var(--rule-warm);
+        margin-top: 64px;
+        padding: 24px 0 48px;
+      }
+      .site-foot .duaa { font-size: 14px; color: var(--ink-secondary); margin-bottom: 8px; }
+      .site-foot .suggest { font-family: var(--sans); font-size: 13px; }
+      .site-foot .suggest a { color: var(--navy-link); }
+    </style>
+  </body>
+</html>
