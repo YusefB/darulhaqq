@@ -1,12 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
+import TopicRow from '../components/TopicRow.astro';
+import { getCollection } from 'astro:content';
+
+const topics = (await getCollection('topics')).sort((a, b) => a.data.order - b.data.order);
 ---
 <Base title="Dār al-Ḥaqq">
   <p class="lede">Refutations of common Salafī claims, drawn from authoritative answers on SeekersGuidance, IslamQA.org, Ask Imam, and hadithanswers.com. Every claim cites a scholar and links the original fatwa.</p>
   <h3>Topics</h3>
-  <p style="font-style:italic;color:var(--ink-secondary);">Topic list will appear here once content is wired in Task 7.</p>
+  <div class="topics">
+    {topics.map(topic => <TopicRow topic={topic} />)}
+  </div>
 </Base>
 
 <style>
   .lede { margin-bottom: 24px; }
+  .topics { margin-top: 8px; }
 </style>
