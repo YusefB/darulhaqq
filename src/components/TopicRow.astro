@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  topic: CollectionEntry<'topics'>;
+}
+
+const { topic } = Astro.props;
+const { title, sources } = topic.data;
+const sourceCount = sources.length;
+const authors = sources.map(s => s.author).slice(0, 3).join(', ');
+---
+<div class="row">
+  <a class="row-title" href={`/topics/${topic.slug}`}>{title}</a>
+  <span class="row-meta">{sourceCount} source{sourceCount === 1 ? '' : 's'} — {authors}</span>
+</div>
+
+<style>
+  .row {
+    padding: 14px 0;
+    border-top: 1px solid var(--rule-warm-soft);
+    display: block;
+  }
+  .row:last-child { border-bottom: 1px solid var(--rule-warm-soft); }
+  .row-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+  }
+  .row-title:hover { text-decoration: underline; }
+  .row-meta {
+    display: block;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-tertiary);
+    margin-top: 4px;
+    letter-spacing: 0.02em;
+  }
+</style>
