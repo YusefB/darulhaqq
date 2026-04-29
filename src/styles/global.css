@@ -1,0 +1,85 @@
+/* Self-hosted fonts */
+@import '@fontsource/source-serif-4/400.css';
+@import '@fontsource/source-serif-4/400-italic.css';
+@import '@fontsource/source-serif-4/600.css';
+@import '@fontsource/amiri/400.css';
+@import '@fontsource/amiri/700.css';
+
+/* Design tokens (locked in spec §6) */
+:root {
+  --bg-paper:        #f9f5ec;
+  --bg-paper-light:  #fdfaf2;
+  --rule-warm:       #d8cfb8;
+  --rule-warm-soft:  #e3d9bf;
+
+  --ink-primary:     #181818;
+  --ink-secondary:   #5a5040;
+  --ink-tertiary:    #6b5f4c;
+
+  --navy:            #1f2c4a;
+  --navy-link:       #1a3d8f;
+
+  --gold:            #c9a14a;
+  --gold-dim:        #8a6d3b;
+
+  --serif: 'Source Serif 4', Charter, Georgia, 'Times New Roman', serif;
+  --sans:  -apple-system, BlinkMacSystemFont, 'Helvetica Neue', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --arabic: 'Amiri', 'Noto Naskh Arabic', 'Times New Roman', serif;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, h4, p, ul, figure, blockquote { margin: 0; }
+ul { padding: 0; list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* Page shell */
+html { background: var(--bg-paper); }
+body {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-primary);
+  background: var(--bg-paper);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reading column */
+.shell { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 600px) { body { font-size: 16px; } }
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--sans);
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.02em; }
+h2 { font-size: 22px; line-height: 1.25; }
+h3 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin: 24px 0 8px;
+}
+
+/* Body text */
+p { margin: 0 0 14px; }
+p + p { margin-top: 0; }
+
+a { color: var(--navy-link); }
+a:visited { color: var(--navy-link); }
+
+em, i { color: var(--ink-secondary); }
+
+/* Arabic */
+.arabic {
+  font-family: var(--arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+}
