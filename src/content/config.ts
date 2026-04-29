@@ -1,5 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 
+const ISO_DATE = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD');
+
 const topics = defineCollection({
   type: 'content',
   schema: z.object({
@@ -12,9 +14,9 @@ const topics = defineCollection({
       site: z.enum(['SeekersGuidance', 'IslamQA.org', 'Ask Imam', 'hadithanswers.com']),
       url: z.string().url(),
       excerpt: z.string(),
-      accessed: z.string(),
+      accessed: ISO_DATE,
     })).min(1),
-    updated: z.string(),
+    updated: ISO_DATE,
   }),
 });
 
