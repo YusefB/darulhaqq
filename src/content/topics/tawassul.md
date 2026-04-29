@@ -23,6 +23,13 @@ sources:
     url: "https://seekersguidance.org/answers/islamic-belief/is-tawassul-through-the-prophet-permissible-in-the-hanafi-school/"
     excerpt: "Yes, it is permissible, according to the Hanafi's, to perform tawassul through the Prophet (Allah bless him and give him peace). (Ibn 'Abidin, Radd al Muhtar) Not only the Hanafis, but the other schools of fiqh allow it. (al Mawsu'a al Kuwaitiyya) There are some scholars of the umma who have deemed it impermissible, however. Still, given their minority and the fact that so many credible scholars from across the schools have held it permissible, it is best not to get into any arguments about it with anyone."
     accessed: "2026-04-28"
+  - author: "Imam Taqī al-Dīn al-Subkī"
+    site: "wahhabisrefuted.wordpress.com"
+    sourceType: "classical-sunni"
+    url: "https://wahhabisrefuted.wordpress.com/2015/07/20/imam-taqi-al-din-al-subki-on-tawassul-istighatha-and-tashaffu/"
+    excerpt: |
+      Know, that it is permissible and good to perform Tawassul, Istighathah (seeking aid) and Tashaffu' (seeking intercession) through the Prophet (peace be upon him) to his Lord, Glorified and Exalted be He. Tawassul through the Prophet is permissible in every situation — before his creation, after his creation, in the worldly life and in the Hereafter. The One whose aid is sought in reality is Allah ta'ala, and the Prophet is an intermediary (Wasitah) between Him and the one seeking aid. So Allah ta'ala is the one whose aid is sought and aid comes from Him by the way of creating and bringing forth. And the Prophet is one whose aid is sought and aid comes from him by the way of being an intermediary means and by the way of acquisition. [Shifā' al-Saqām, pp. 357–385]
+    accessed: "2026-04-29"
 ---
 
 ### The Salafī position

@@ -23,6 +23,13 @@ sources:
     url: "https://islamqa.org/hanafi/darululoomtt/148575/gatherings-for-quranic-reading-and-dhikr/"
     excerpt: "It is permissible for males to gather at a place on one or more occasions to recite the Quran. However, this must not be done to an extent where it becomes a customary gathering and continuous practice. There is no prohibition in people gathering for the sake of reciting Quran or Dhikr, however, one must ensure that it does not become a practice which becomes established among the people as a custom, and viewed as a religious obligation and duty which must be carried out a continuous basis. The scholars have warned about this, and have considered it an innovation for one to make binding upon himself that which the shariah has not made binding. (Al Itisaam). Hence, if this sort of gathering occurs, then it should be done with the understanding that it is an allowed act which carries merits, but is not a fardh, wajib, Sunnah or Mustahab act. This should not be viewed as being one which is essential or one which is a religious duty in Islam."
     accessed: "2026-04-28"
+  - author: "Ibn al-Qayyim al-Jawziyya (reporting Ibn Taymiyya's practice)"
+    site: "wahhabisrefuted.wordpress.com"
+    sourceType: "classical-sunni"
+    url: "https://wahhabisrefuted.wordpress.com/2017/09/02/the-prescribed-dhikr-of-ibn-taymiyya-vs-the-pseudo-salafis-of-islam-qa/"
+    excerpt: |
+      Whosoever constantly recites the words "Ya Hayyu Ya Qayyum, La ilaha illa anta, bi-rahmatika astaghith" forty times daily, his heart will attain life. [Ibn al-Qayyim, Madarij al-Salikin, 1:446, reporting the prescription of Shaykh al-Islam Ibn Taymiyya.] The wahhabisrefuted article uses this passage to expose an internal inconsistency in the IslamQA position: IslamQA criticises the practice of reciting dhikr in prescribed numbers as an innovation lacking Prophetic sanction, yet this very practice — assigning a specific number (forty) to a specific formula — was recommended by Ibn Taymiyya himself, the foundational authority of the Salafi school, on grounds of spiritual benefit. The article notes that the prescribed dhikr is not established from the Prophet nor the pious Salaf, and that Ibn Taymiyya's recommendation of it illustrates that even leading Salafi authorities accepted prescribed forms of dhikr not explicitly commanded in hadith.
+    accessed: "2026-04-29"
 ---
 
 ### The Salafī position

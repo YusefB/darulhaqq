@@ -68,6 +68,13 @@ sources:
       scholars since the time of the Companions till present day have permitted asking of Allah Most High by the rank
       of the Prophets and righteous.
     accessed: "2026-04-29"
+  - author: "Imam Fakhr al-Dīn al-Rāzī"
+    site: "wahhabisrefuted.wordpress.com"
+    sourceType: "classical-sunni"
+    url: "https://wahhabisrefuted.wordpress.com/2016/04/17/so-called-grave-worship-refutation-by-imam-fakhr-al-din-al-razi/"
+    excerpt: |
+      They built these statues and idols upon the forms of their Prophets and leaders (Akabir), and they believed that when they would worship these idols, then these leaders (Akabir) would become intercessors for them in front of Allah. The detailed answer to this is that these disbelievers either desired the intercession from these idols or from these scholars and saints upon whose forms these idols have been made. It is possible that the aim of these verses is to refute the deniers of resurrection, or is it possible that the aim is to refute the worshipers of idols — and this because these people were believing in Allah (Ta'ala) and they said: We worship these idols to get close to Allah. Know that there is none in the universe who established a partner to Allah being equal in existence, power, knowledge, and wisdom. [The article draws on al-Rāzī's Tafsīr al-Kabīr to establish that the Qurānic condemnation is directed at those who worshipped created objects as divine equals — not at Muslims who visit graves while maintaining tawḥīd.]
+    accessed: "2026-04-29"
 ---
 
 ### The Salafī position

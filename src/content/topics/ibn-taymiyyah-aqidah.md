@@ -17,6 +17,13 @@ sources:
     url: "https://seekersguidance.org/answers/general-counsel/can-you-recommend-a-book-on-ibn-taymiyya-to-read/"
     excerpt: "It is difficult for me to recommend a single book on Shaykh Taqi al-Din ibn Taymiyya given the degree of controversy surrounding him. Ibn Hajar al-`Asqalani wrote a biography of him that gathered both the positive and negative attitudes that scholars held in his al-Durar al-Kamina (1:144-160), which is perhaps worth a read. Additionally. Imam al-Dhahabi has a monograph entitled al-Durra al-Yatimiyya fi al-Sira al-Taymiyya. Both these works, however, are in Arabic. I do not know of many works that comprehensively treat the positions held by Shaykh Ibn Taymiyya in the English language. Shaykh Gibril Haddad's translation of Ibn Jahbal al-Kilabi's work entitled \"The Refutation of Him Who Attributes Direction to Allah\" is perhaps a work you may look into further. The text itself is a refutation of a specific issue, but Shaykh Gibril discusses a number of other controversial positions that Shaykh Ibn Taymiyya held in aspects of creed and law."
     accessed: "2026-04-28"
+  - author: "Sultan Muḥammad ibn Qalāwūn (edict, 705 AH)"
+    site: "wahhabisrefuted.wordpress.com"
+    sourceType: "classical-sunni"
+    url: "https://wahhabisrefuted.wordpress.com/2016/02/28/the-edict-of-sultan-muhammad-ibn-qalawun-regarding-ibn-taymiyyah/"
+    excerpt: |
+      He attributed to Allah letter, sound, similarity to others, and a body. It is forbidden to utter what he uttered about the direction of spatial highness, or to speak about letter or sound, or to speak at leisure about the Self or attribute, or to utter any tajsim (corporealism). It is forbidden to imitate him in tashbih (likening Allah to His creation), or to dissent from the opinions of the a'immah, or to be alone of an opinion away from the scholars of the Ummah, or to attribute to Allah a direction or to allude to Him a place and manner. The edict orders Ibn Taymiyyah imprisoned and his teachings prohibited throughout the realm, documenting the formal position of the Mamluk scholarly establishment — that his creedal claims regarding divine direction and bodily attributes constituted a departure from the transmitted ʿaqīdah of the four madhāhib.
+    accessed: "2026-04-29"
 ---
 
 ### The Salafī position
