@@ -17,6 +17,34 @@ sources:
     url: "https://seekersguidance.org/answers/adab/is-it-allowed-to-celebrate-the-mawlid-of-sayyida-zaynab/"
     excerpt: "Yes, it is permissible to attend the Mawlid of Sayyida Zaynab (Allah be pleased with her), provided that no unlawful actions occur, and no un-Islamic beliefs are attached to the celebration. As with the general ruling on Mawlid gatherings, if the event involves the remembrance of Allah, praise of the Prophet (Allah bless him and give him peace), and reflection on the lives of the righteous without violating Sacred Law, then it is not only permissible but potentially praiseworthy, within limits, and Allah knows best. Celebrating the lives of the righteous, such as Sayyida Zaynab (Allah be pleased with her), can increase love for the Prophet's family and inspire them with their noble character. When free from actions and beliefs that contradict the Quran and Sunna, such gatherings fall within the wide scope of permissible and commendable cultural expressions in Islam."
     accessed: "2026-04-28"
+  - author: "Imam Jalāl al-Dīn al-Suyūṭī (d. 911 AH)"
+    site: "Mawlid in the Shāfiʿī Madhhab (PDF, user-supplied)"
+    sourceType: "classical-text"
+    excerpt: |
+      "In my opinion, the basis of the Mawlid, which is the gathering of people, reciting what has been made easy from the Qurʾān, narrating the Aḥādīth about the beginning of the matter of the Prophet ﷺ and the signs that occurred upon his birth […], it is a good innovation that the person will be rewarded for."
+      [al-Ḥāwī li al-Fatāwī 1/221]
+    accessed: "2026-04-29"
+  - author: "Ibn Ḥajar al-ʿAsqalānī (d. 852 AH) — Amīr al-Muʾminīn fī al-Ḥadīth"
+    site: "Mawlid in the Shāfiʿī Madhhab (PDF, user-supplied)"
+    sourceType: "classical-text"
+    excerpt: |
+      "The origin of the Mawlid is an innovation that has not been transmitted from any of the righteous predecessors from the first three generations. Nevertheless, it includes both good as well as its opposite (bad) aspects. So, whoever seeks the good aspects in his action and avoids its opposites, then it is a good innovation. But whoever does not, then it is not. It has become clear to me that it is based on a proven origin, which is what has been established in the Ṣaḥīḥayn that the Messenger ﷺ arrived in Madīnah and found the Jews fasting on the Day of ʿĀshūrāʾ. So, he asked them and they said: 'This is the day on which Allāh drowned Firʿawn and saved Mūsā, so we fast it in gratitude to Allāh.' He ﷺ said: 'I have more right to Mūsā than you', and he fasted it, and commanded them to fast it too. Therefore, one of the benefits of this is doing so as a thanksgiving to Allāh for what He has bestowed on a particular day of giving a blessing or averting a calamity, and this is repeated on the same day every year. Thanking Allāh can be achieved through various acts of worship such as prostration, fasting, charity, recitation, and what is a greater blessing than the manifestation of this Prophet of Mercy, on that day?"
+      [al-Ḥāwī li al-Fatāwī 1/229]
+    accessed: "2026-04-29"
+  - author: "Ibn Ḥajar al-Haytamī (d. 974 AH) — Shaykh al-Islām of Mecca"
+    site: "Mawlid in the Shāfiʿī Madhhab (PDF, user-supplied)"
+    sourceType: "classical-text"
+    excerpt: |
+      "Most of the gatherings of Mawlid and Dhikr that take place around us are based on virtue as they contain Ṣadaqah, Dhikr, and Ṣalawāt and Salām upon the Prophet ﷺ." He then mentioned some Aḥādīth, and said: "In these Aḥādīth, there is a clear indication of the virtue of gathering for goodness and sitting together for it. Those who gather for goodness are also praised by Allāh, and He boasts about them to the angels. Tranquility descends upon them, and they are enveloped in mercy. Allāh mentions them with praise among the angels, so what virtues can be greater than these? As for the questioner's inquiry on whether gathering for permissible innovations is allowed, the answer is yes, it is allowed."
+      [al-Fatāwā al-Ḥadīthiyyah 109]
+    accessed: "2026-04-29"
+  - author: "Imam Abū Shāmah al-Maqdisī (d. 665 AH)"
+    site: "Mawlid in the Shāfiʿī Madhhab (PDF, user-supplied)"
+    sourceType: "classical-text"
+    excerpt: |
+      "And of the best of what has been innovated in our time in this regard is what used to be done in the city of Irbil, may Allāh bless it, every year on the Prophet's birthday ﷺ of giving charity, doing good, displaying decorations and joy. Along with the goodness towards the poor, this creates a feeling of love, respect, and awe for him ﷺ in the heart of the doer, who thanks Allāh for the Messenger of Mercy for all mankind. […] Such beauty is praised and admired, and its doer is to be thanked and praised."
+      [al-Bāʿith ʿalā Inkār al-Bidaʿ wa al-Ḥawādith 22]
+    accessed: "2026-04-29"
 ---
 
 ### The Salafī position

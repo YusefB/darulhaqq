@@ -1,14 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const toc = [
+  { id: 'bidah',      label: 'On the category of bidʿah' },
+  { id: 'mawlid',     label: 'On the Mawlid' },
+  { id: 'tawassul',   label: 'On tawassul and istighātha' },
+  { id: 'ziyara',     label: 'On ziyāra (visiting graves)' },
+  { id: 'attributes', label: 'On the divine attributes' },
+  { id: 'kalam',      label: 'On kalām' },
+];
 ---
-<Base title="Primary sources library" compactHeader={true}>
+<Base title="Primary sources library" compactHeader={true} toc={toc}>
   <p class="ar-title" lang="ar" dir="rtl">مكتبة المصادر</p>
   <h2>Primary sources library</h2>
   <p class="summary">A starter library of classical scholarly citations on the topics this site covers. Each entry names the scholar, the work, and where the cited position appears, with a brief excerpt or paraphrase. The aim is to give readers a foothold for going to the sources themselves rather than to substitute for them. Contributions and corrections are welcome via the GitHub issues link in the footer.</p>
 
   <p class="standards">Verification standard: every citation here points to a specific named work. Where the excerpt is verbatim from a recognised English translation, that is noted. Where it is an English paraphrase of an Arabic passage, the Arabic source is named and a reader who reads Arabic can verify directly. We do not invent attributions; we do not paraphrase as if it were a quote.</p>
 
-  <h3>On the category of <em>bidʿah</em></h3>
+  <h3 id="bidah">On the category of <em>bidʿah</em></h3>
 
   <div class="entry">
     <p class="cite"><strong>Imam al-Shāfiʿī</strong> (d. 204 AH) — narrated by al-Bayhaqī in <em>Manāqib al-Shāfiʿī</em></p>
@@ -25,29 +34,19 @@ import Base from '../layouts/Base.astro';
     <p>Al-Nawawī's commentary on this ḥadīth is the standard classical Shāfiʿī treatment: the Prophet's ﷺ statement is general in form but specific in intended scope; what it intends is innovation that contradicts the Sharīʿah, not every new occasion or arrangement. Al-Nawawī divides bidʿa into five fiqh categories — <em>wājib</em> (e.g., codifying the Qurʾān), <em>mandūb</em> (e.g., founding madrasas), <em>mubāḥ</em>, <em>makrūh</em>, and <em>ḥarām</em> — under the principle that the legal status of the innovated act is determined by its content, not by the fact of its newness.</p>
   </div>
 
-  <h3>On the Mawlid</h3>
+  <h3 id="mawlid">On the Mawlid</h3>
 
   <div class="entry">
     <p class="cite"><strong>Imam Jalāl al-Dīn al-Suyūṭī</strong> (d. 911 AH) — <em>Ḥusn al-Maqṣid fī ʿAmal al-Mawlid</em></p>
-    <p>The standard classical Sunnī treatise on the Mawlid. Al-Suyūṭī classes the Mawlid as a <em>bidʿa ḥasana</em> when it consists of recitation of Qurʾān, narration of the Prophet's ﷺ life, charity, and joy. He cites Ibn Diḥyah and Ibn Ḥajar al-ʿAsqalānī as fellow endorsers among the major early-15th-century Sunnī authorities. The work is brief, fully-cited, and remains the primary text consulted by classical Sunnī muftis on the question.</p>
+    <p>The standard classical Sunnī treatise on the Mawlid. Al-Suyūṭī classes the Mawlid as a <em>bidʿa ḥasana</em> when it consists of recitation of Qurʾān, narration of the Prophet's ﷺ life, charity, and joy, by analogy with congregational tarāwīḥ — which ʿUmar himself called <em>niʿmati l-bidʿatu hādhihi</em>. Al-Suyūṭī states in <em>al-Ḥāwī li al-Fatāwī</em> (1/221): "In my opinion, the basis of the Mawlid, which is the gathering of people, reciting what has been made easy from the Qurʾān, narrating the Aḥādīth about the beginning of the matter of the Prophet ﷺ and the signs that occurred upon his birth, it is a good innovation that the person will be rewarded for." He cites Ibn Ḥajar al-ʿAsqalānī as a fellow endorser among the major early-15th-century Sunnī authorities.</p>
   </div>
 
   <div class="entry">
-    <p class="cite"><strong>Ibn Ḥajar al-Haytamī</strong> (d. 974 AH) — <em>al-Iʿlām bi-Qawāṭiʿ al-Islām</em> and <em>al-Niʿmat al-Kubrā ʿalā al-ʿĀlam fī Mawlid Sayyid Walad Ādam</em></p>
-    <p>Al-Haytamī, the leading Shāfiʿī muftī of late-Mamlūk Mecca, writes in defense of the Mawlid as a praiseworthy practice when conducted with Sharʿī decorum. He addresses and rebuts the prohibitionist arguments specifically.</p>
+    <p class="cite"><strong>Ibn Ḥajar al-Haytamī</strong> (d. 974 AH) — <em>al-Fatāwā al-Ḥadīthiyya</em></p>
+    <p>Al-Haytamī, the leading Shāfiʿī muftī of late-Mamlūk Mecca, endorsed the same classification as al-Suyūṭī. Asked about the gatherings of Mawlid and Dhikr, he responded (<em>al-Fatāwā al-Ḥadīthiyyah</em>, p. 109): "Most of the gatherings of Mawlid and Dhikr that take place around us are based on virtue as they contain Ṣadaqah, Dhikr, and Ṣalawāt and Salām upon the Prophet ﷺ … Those who gather for goodness are also praised by Allāh, and He boasts about them to the angels. Tranquility descends upon them, and they are enveloped in mercy … As for the questioner's inquiry on whether gathering for permissible innovations is allowed, the answer is yes, it is allowed." He also wrote a full book defending the practice: <em>Itmām al-Niʿmah al-Kubrā ʿalā al-ʿĀlam bi Mawlid Sayyid Walad Ādam</em>.</p>
   </div>
 
-  <h3>On tawassul and istighātha</h3>
-
-  <div class="entry">
-    <p class="cite"><strong>Imam al-Tirmidhī</strong>, <em>Sunan al-Tirmidhī</em> 3578 — the ḥadīth of the blind man</p>
-    <p>The Prophet ﷺ taught a blind man a duʿāʾ that includes the words: "<em>allāhumma innī asʾaluka wa-atawajjahu ilayka bi-Nabiyyika Muḥammad — yā Muḥammad, innī atawajjahu bika ilā rabbī fī ḥājatī hādhihi li-tuqḍā lī</em>" — "O Allāh, I ask You and turn to You by Your Prophet Muḥammad. O Muḥammad, I turn through you to my Lord with this need of mine, that it might be granted." Al-Tirmidhī graded the ḥadīth <em>ḥasan ṣaḥīḥ gharīb</em>. The wording is the foundational textual basis for tawassul through the Prophet's ﷺ rank.</p>
-  </div>
-
-  <div class="entry">
-    <p class="cite"><strong>al-Ṭabarānī</strong> — <em>al-Muʿjam al-Kabīr</em>, narration of ʿUthmān ibn Ḥunayf</p>
-    <p>ʿUthmān ibn Ḥunayf, the Companion who originally narrated the blind-man's duʿāʾ from the Prophet ﷺ, taught the same wording to a man with a need <em>after</em> the Prophet's ﷺ death — and the man's need was granted. This narration is the textual basis classical Sunnī scholars cite for the permissibility of tawassul through the Prophet ﷺ after his earthly life.</p>
-  </div>
+  <h3 id="tawassul">On tawassul and istighātha</h3>
 
   <div class="entry">
     <p class="cite"><strong>Imam Taqī al-Dīn al-Subkī</strong> (d. 756 AH) — <em>Shifāʾ al-Saqām fī Ziyārat Khayr al-Anām</em></p>
@@ -55,35 +54,28 @@ import Base from '../layouts/Base.astro';
   </div>
 
   <div class="entry">
-    <p class="cite"><strong>Ibn Ḥajar al-Haytamī</strong> (d. 974 AH) — <em>al-Jawhar al-Munaẓẓam fī Ziyārat al-Qabr al-Sharīf al-Nabawī al-Mukarram</em></p>
-    <p>A second-generation classical Sunnī treatise on visiting the Prophet's ﷺ grave and the permissibility of tawassul through him. Al-Haytamī works through the same questions as al-Subkī with additional Mamlūk-era fatwa material.</p>
+    <p class="cite"><strong>Imam al-Tirmidhī</strong>, <em>Sunan al-Tirmidhī</em> 3578 — the ḥadīth of the blind man</p>
+    <p>The Prophet ﷺ taught a blind man a duʿāʾ that includes the words: "<em>allāhumma innī asʾaluka wa-atawajjahu ilayka bi-Nabiyyika Muḥammad — yā Muḥammad, innī atawajjahu bika ilā rabbī fī ḥājatī hādhihi li-tuqḍā lī</em>" — "O Allāh, I ask You and turn to You by Your Prophet Muḥammad. O Muḥammad, I turn through you to my Lord with this need of mine, that it might be granted." Al-Tirmidhī graded the ḥadīth <em>ḥasan ṣaḥīḥ gharīb</em>; al-Albānī also authenticated it. The wording is the foundational textual basis for tawassul through the Prophet's ﷺ rank.</p>
   </div>
 
-  <h3>On visiting graves (ziyārat al-qubūr)</h3>
+  <div class="entry">
+    <p class="cite"><strong>al-Ṭabarānī</strong> — <em>al-Muʿjam al-Kabīr</em>, narration of ʿUthmān ibn Ḥunayf</p>
+    <p>ʿUthmān ibn Ḥunayf, the Companion who originally narrated the blind-man's duʿāʾ from the Prophet ﷺ, taught the same wording to a man with a need <em>after</em> the Prophet's ﷺ death — and the man's need was granted. This narration is the textual basis classical Sunnī scholars cite for the permissibility of tawassul through the Prophet ﷺ after his earthly life.</p>
+  </div>
+
+  <h3 id="ziyara">On visiting graves (ziyārat al-qubūr)</h3>
 
   <div class="entry">
-    <p class="cite"><strong>Imam al-Nawawī</strong> — <em>al-Adhkār</em>, "Bāb mā yaqūluhu zāʾir al-qubūr"</p>
+    <p class="cite"><strong>Imam al-Nawawī</strong> (d. 676 AH) — <em>al-Adhkār</em>, "Bāb mā yaqūluhu zāʾir al-qubūr"</p>
     <p>The standard classical Shāfiʿī chapter on visiting graves, presenting the recommended decorum: the salām formula transmitted from the Prophet ﷺ ("<em>al-salāmu ʿalaykum dāra qawmin muʾminīn</em>"), recitation of Qurʾān whose reward is sent to the deceased, and the duʿāʾ for forgiveness. Al-Nawawī treats grave visitation as recommended (<em>mustaḥabb</em>) for both men and women within the conditions transmitted from the Salaf.</p>
   </div>
 
   <div class="entry">
-    <p class="cite"><strong>Ibn al-Ḥājj al-Mālikī</strong> (d. 737 AH) — <em>al-Madkhal</em>, vol. 1, "Faṣl fī Ziyārat al-Qubūr"</p>
-    <p>The classical Mālikī manual on devotional decorum. Ibn al-Ḥājj treats grave visitation extensively, including its permissibility and its limits — particularly his characteristic warnings against syncretic or excessive practices that the Mālikī tradition had encountered in its 8th-century Maghribī context.</p>
+    <p class="cite"><strong>The Prophet's ﷺ address at al-Baqīʿ</strong> — <em>Ṣaḥīḥ Muslim</em></p>
+    <p>ʿĀʾisha (raḍiya Allāhu ʿanhā) narrated that the Prophet ﷺ would visit the graveyard of al-Baqīʿ and address its inhabitants: "<em>al-salāmu ʿalaykum dāra qawmin muʾminīn, wa-innā in shāʾa Allāhu bikum lāḥiqūn</em>" — "Peace be upon you, O abode of a believing people; and we will, if Allāh wills, join you." This narration establishes both the practice of visiting graves and the Sunnah formula for addressing the deceased.</p>
   </div>
 
-  <h3>On group dhikr</h3>
-
-  <div class="entry">
-    <p class="cite"><strong>Imam al-Nawawī</strong> — <em>al-Adhkār</em>, "Bāb al-Dhikr ba'd al-Ṣalāh", citing Bukhārī and Muslim</p>
-    <p>The Companion Ibn ʿAbbās narrated: "We used to know that the prayer of the Prophet ﷺ had ended by the dhikr [raised in the masjid afterwards]" (<em>kunnā naʿrifu inqiḍāʾ ṣalāt al-Nabī ﷺ bi-l-takbīr</em>). Al-Nawawī cites this as the textual basis for the permissibility of audible collective dhikr after the obligatory prayer in congregation.</p>
-  </div>
-
-  <div class="entry">
-    <p class="cite"><strong>Imam al-Suyūṭī</strong> — <em>Natījat al-Fikar fī al-Jahr bi-l-Dhikr</em></p>
-    <p>Al-Suyūṭī's specific treatise on raising the voice in dhikr — addressing both individual and collective contexts. He gathers the Qurʾānic and ḥadīth texts on the virtue of dhikr in groups (notably the ḥadīth of the angels surrounding gatherings of dhikr) and concludes that audible collective dhikr is permitted within Sharʿī decorum.</p>
-  </div>
-
-  <h3>On the divine attributes (ʿaqīdah)</h3>
+  <h3 id="attributes">On the divine attributes (ʿaqīdah)</h3>
 
   <div class="entry">
     <p class="cite"><strong>Imam Abū Jaʿfar al-Ṭaḥāwī</strong> (d. 321 AH) — <em>al-ʿAqīda al-Ṭaḥāwiyya</em></p>
@@ -91,25 +83,15 @@ import Base from '../layouts/Base.astro';
   </div>
 
   <div class="entry">
-    <p class="cite"><strong>Imam Abū al-Ḥasan al-Ashʿarī</strong> (d. 324 AH) — <em>al-Ibāna ʿan Uṣūl al-Diyāna</em></p>
-    <p>Al-Ashʿarī's late creedal manual, written after his return from Muʿtazilism to mainstream Sunnism. Ascribed to the Atharī line by Salafī scholars and read alongside al-Ashʿarī's earlier kalām-based works by classical Ashʿarīs. The textual situation itself is part of the disagreement.</p>
+    <p class="cite"><strong>Ibn ʿAsākir</strong> (d. 571 AH) — <em>Tabyīn Kadhib al-Muftarī fī mā Nusiba ilā al-Imām al-Ashʿarī</em></p>
+    <p>The foundational Sunnī refutation of the claim that Imam al-Ashʿarī recanted his Ashʿarī positions late in life and returned to a literalist Atharī stance. Ibn ʿAsākir documents the transmission chains of al-Ashʿarī's students and the authentic reception of his kalām method through the classical period. The work is essential reading for understanding the Ashʿarī school's own account of its founding figure.</p>
   </div>
 
-  <div class="entry">
-    <p class="cite"><strong>Imam al-Bayhaqī</strong> (d. 458 AH) — <em>al-Asmāʾ wa-l-Ṣifāt</em></p>
-    <p>The most extensive classical Sunnī treatment of the divine names and attributes, working through every relevant Qurʾānic verse and ḥadīth and presenting the early Sunnī positions on each. Al-Bayhaqī's discussion of the verses on <em>istiwāʾ</em>, <em>yad</em>, <em>wajh</em>, and <em>nuzūl</em> is the standard reference for the classical Sunnī range — affirmation with <em>tafwīḍ</em>, with <em>ta'wīl</em> where necessary to negate <em>tashbīh</em>.</p>
-  </div>
-
-  <h3>On taqlīd of a madhhab</h3>
+  <h3 id="kalam">On kalām</h3>
 
   <div class="entry">
-    <p class="cite"><strong>Imam al-Ghazālī</strong> (d. 505 AH) — <em>al-Mustaṣfā min ʿIlm al-Uṣūl</em></p>
-    <p>Al-Ghazālī's <em>uṣūl al-fiqh</em> manual. The standard classical Sunnī treatment of the relationship between the qualified <em>mujtahid</em> and the <em>muqallid</em> (the follower). Al-Ghazālī sets out the conditions under which a Muslim is required to do taqlīd of a recognised madhhab — that is, the great majority of Muslims — and the conditions under which ijtihād becomes obligatory rather than optional.</p>
-  </div>
-
-  <div class="entry">
-    <p class="cite"><strong>Imam al-Nawawī</strong> — introduction to <em>al-Majmūʿ Sharḥ al-Muhadhdhab</em></p>
-    <p>The standard classical Shāfiʿī articulation of the <em>muqallid</em>'s obligation: the lay Muslim must follow one of the recognised four madhāhib in their Sharʿī rulings, since the alternative — direct ijtihād from the Qurʾān and Sunnah by the unqualified — produces religious chaos. The argument is part of the classical Sunnī defense of the four-madhhab framework.</p>
+    <p class="cite"><strong>Imam al-Ghazālī</strong> (d. 505 AH) — <em>Iḥyāʾ ʿUlūm al-Dīn</em></p>
+    <p>Al-Ghazālī classifies kalām — systematic rational theology in defense of Islamic ʿaqīdah — as <em>farḍ kifāyah</em> (a communal obligation) in circumstances where philosophical and rationalist challenges arise and no qualified scholar has answered them. His treatment in the <em>Iḥyāʾ</em> addresses both the conditions under which kalām becomes obligatory and its limits; this is the classical Sunnī position that distinguishes defensive kalām from the speculative excesses that the early scholars criticized.</p>
   </div>
 
   <h3>How this library will grow</h3>
