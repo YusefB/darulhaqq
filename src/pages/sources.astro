@@ -1,11 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const toc = [
+  { id: 'qa-sites', label: 'Q&A sites' },
+  { id: 'readers', label: 'Curated readers' },
+  { id: 'classical-works', label: 'Classical works' },
+  { id: 'excluded', label: "What's not on this list" },
+];
 ---
-<Base title="Sources" compactHeader={true}>
+<Base title="Sources" compactHeader={true} toc={toc}>
   <h2>Sources</h2>
   <p>Every quotation on this site is drawn from a published, verifiable source. The lists below are the answer sites, curated readers, and classical works the topic pages most often cite. They were chosen because their answering scholars and editors operate within the four-madhhab Sunnī framework and the classical creedal schools (Ashʿarī, Māturīdī, Atharī) — the scholarly mainstream of Sunnī Islam.</p>
 
-  <h3>Q&amp;A sites</h3>
+  <h3 id="qa-sites">Q&amp;A sites</h3>
 
   <p><strong>SeekersGuidance.</strong> <a href="https://seekersguidance.org/" rel="noopener external">seekersguidance.org</a> — Founded by Shaykh Faraz Rabbani, with a roster of scholars across all four madhāhib and the recognized creedal schools.</p>
 
@@ -15,7 +22,7 @@ import Base from '../layouts/Base.astro';
 
   <p><strong>hadithanswers.com.</strong> <a href="https://hadithanswers.com/" rel="noopener external">hadithanswers.com</a> — Dedicated to ḥadīth verification and grading from the classical Sunnī tradition; useful for sourcing the chains of reports that come up in disputes.</p>
 
-  <h3>Curated readers and refutation sites</h3>
+  <h3 id="readers">Curated readers and refutation sites</h3>
 
   <p>These sites do not produce original fatwa but compile classical Sunnī material — verbatim quotations from al-Nawawī, al-Suyūṭī, al-Subkī, al-Haytamī, al-Bayhaqī, and others — organised topic-by-topic. They are useful entry points for finding the classical sources that lie behind the contemporary debates.</p>
 
@@ -27,7 +34,7 @@ import Base from '../layouts/Base.astro';
 
   <p><strong>masud.co.uk.</strong> <a href="http://www.masud.co.uk/" rel="noopener external">masud.co.uk</a> — The personal website of Br. Masud Khan, hosting articles, fatwa-style answers, and translated works by Sh. Nuh Keller (translator of the <em>Reliance of the Traveller</em>) and other traditional Sunnī scholars writing in English.</p>
 
-  <h3>Classical works cited on this site</h3>
+  <h3 id="classical-works">Classical works cited on this site</h3>
 
   <p>Where the topic pages cite a classical work directly — without an intermediate URL — these are the editions and authors whose works the citations refer to. They are listed here so a reader can locate them through any major Islamic library or printed edition.</p>
 
@@ -47,7 +54,7 @@ import Base from '../layouts/Base.astro';
 
   <p>Imam Yūsuf al-Nabhānī (d. 1932 CE), <em>Shawāhid al-Ḥaqq fī al-Istighātha bi-Sayyid al-Khalq</em> — a comprehensive late-Ottoman defense of istighātha and tawassul through the Prophet ﷺ.</p>
 
-  <h3>What's not on this list</h3>
+  <h3 id="excluded">What's not on this list</h3>
 
   <p>Salafī-aligned sites (such as islamqa.info, binbaz.org.sa, sahab.net, or any of the major English-language Salafī publishing houses) are not listed here. They are cited on the topic pages where the Salafī position is being presented and engaged — but they are not part of this site's source whitelist for affirmative classical Sunnī teaching, since their methodology and creed depart from the four-madhhab Ashʿarī / Māturīdī / Atharī tradition this site frames itself within.</p>
 </Base>

@@ -1,12 +1,20 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const toc = [
+  { id: 'evaluation', label: 'How a claim is evaluated' },
+  { id: 'sources', label: 'Source hierarchy' },
+  { id: 'glossary', label: 'Glossary of key terms' },
+  { id: 'scope', label: 'What this site is not' },
+  { id: 'tone', label: 'Tone and standards' },
+];
 ---
-<Base title="Methodology" compactHeader={true}>
+<Base title="Methodology" compactHeader={true} toc={toc}>
   <p class="ar-title" lang="ar" dir="rtl">المنهج</p>
   <h2>Methodology</h2>
   <p class="summary">How Dār al-Ḥaqq evaluates contested claims, the hierarchy of sources we draw on, and the technical vocabulary every visitor should know before reading the topic pages.</p>
 
-  <h3>How a claim is evaluated on this site</h3>
+  <h3 id="evaluation">How a claim is evaluated on this site</h3>
   <p>Every contested question on this site goes through the same four-step evaluation:</p>
   <ol>
     <li><strong>The Salafī position is presented first, in its own terms,</strong> with a representative quotation from a recognized Salafī source (Ibn Taymiyya, Ibn ʿAbd al-Wahhāb, Albānī, Ibn Bāz, Ibn al-ʿUthaymīn, or contemporary Salafī Q&amp;A sites such as IslamQA.info).</li>
@@ -16,7 +24,7 @@ import Base from '../layouts/Base.astro';
   </ol>
   <p>The aim is not to score points but to give the reader enough to make their own informed judgement, and to know what their sources are when they go to study the question further.</p>
 
-  <h3>Source hierarchy</h3>
+  <h3 id="sources">Source hierarchy</h3>
   <p>In Sunnī uṣūl al-fiqh, the recognized sources of a religious ruling are, in order:</p>
   <ol>
     <li><strong>The Qurʾān</strong> — the literal Word of Allāh, transmitted by uninterrupted mass-narration (<em>tawātur</em>).</li>
@@ -27,7 +35,7 @@ import Base from '../layouts/Base.astro';
   <p>All four schools (Ḥanafī, Mālikī, Shāfiʿī, Ḥanbalī) accept these four. The schools differ on subordinate sources: <em>istiḥsān</em> (juristic preference, prominent in Ḥanafī fiqh), <em>maṣlaḥa mursala</em> (unrestricted public interest, prominent in Mālikī fiqh), and <em>ʿamal ahl al-Madīna</em> (the practice of the people of Medina, distinctively Mālikī).</p>
   <p>The Salafī methodological claim is that they restrict themselves to "the Qurʾān and the Sunnah upon the understanding of the Salaf" and that the four-madhāhib structure adds unnecessary intermediation. The classical reply is that the four schools <em>are</em> the codified understanding of the Salaf, refined over generations by scholars whose isnāds in fiqh, ḥadīth, and ʿaqīdah trace back through the Salaf themselves. The disagreement is real, and the topic pages on this site work it out case by case.</p>
 
-  <h3>Glossary of key terms</h3>
+  <h3 id="glossary">Glossary of key terms</h3>
 
   <p class="term"><strong>Bidʿah</strong> — Innovation. Linguistically, anything new. Technically, a religious practice or belief introduced after the time of the Prophet ﷺ that has no basis in the established Sharīʿah. The Salafī position holds that <em>every</em> bidʿah is misguidance (<em>kullu bidʿatin ḍalālah</em>); the classical Sunnī position, going back to ʿUmar ibn al-Khaṭṭāb's reaction to congregational tarāwīḥ ("<em>niʿmati l-bidʿatu hādhihi</em> — what an excellent innovation this is") and elaborated by Imam al-Shāfiʿī, distinguishes between <em>bidʿah ḍalāla</em> (a religiously blameworthy innovation that contradicts the Sharīʿah) and <em>bidʿah ḥasana</em> (a praiseworthy innovation that gathers people around already-legislated acts, such as building madrasas or printing the Qurʾān). The classical five-category taxonomy of innovation — obligatory, recommended, permissible, offensive, and unlawful — developed by al-ʿIzz ibn ʿAbd al-Salām and confirmed by Imam al-Nawawī and Ibn Ḥajar al-ʿAsqalānī, is treated in the appendix "Blameworthy Innovation (Bidʿa)" in Imam al-Nawawī's <em>al-Maqāṣid</em> (Sh. Nuh Keller's translation and notes, pp. 154–156).</p>
 
@@ -49,12 +57,12 @@ import Base from '../layouts/Base.astro';
 
   <p class="term"><strong>Salaf vs. "Salafī"</strong> — The lowercase <em>salaf</em> means "predecessor" — the first three generations of Muslims (Ṣaḥāba, Tābiʿīn, Tabaʿ al-Tābiʿīn), whose authority every Sunnī school accepts. Capitalised "Salafī" or "Salafism" refers to the modern revivalist movement that began with Muḥammad ibn ʿAbd al-Wahhāb in 18th-century Najd and was globalised through 20th-century Saudi institutions. The two are distinct: the Salaf are a generation; Salafism is a school of thought that claims to recover their methodology directly. The <a href="/">Origins page</a> sketches the latter's history.</p>
 
-  <h3>What this site is not</h3>
+  <h3 id="scope">What this site is not</h3>
   <p>Dār al-Ḥaqq is not a fatwa platform. The maintainer is a student of traditional Sunnī ʿilm, not a muftī, and the site does not issue rulings. The topic pages organize and frame existing scholarship; for binding answers on personal practice, ask a qualified shaykh in your locality.</p>
 
   <p>It is also not a comprehensive treatment of every contested question — the topic list is a small starter set, not a survey. The <a href="/sources">Sources page</a> lists the answer-sites we draw on most, and the topic pages cite books (Imam al-Nawawī's <em>al-Adhkār</em>, al-Suyūṭī's <em>Ḥusn al-Maqṣid</em>, al-Ṭabarānī's <em>al-Muʿjam al-Kabīr</em>, and others) where they are the primary basis of an argument.</p>
 
-  <h3>Tone and standards</h3>
+  <h3 id="tone">Tone and standards</h3>
   <p>Every quotation must be verbatim from a verifiable source. We do not paraphrase scholars in their own quotation marks; we do not insert words into a citation that the cited scholar did not write. We do not use pejoratives or labels intended to delegitimize a scholarly opponent (<em>mubtadiʿ</em>, <em>ḍāll</em>, etc.) — the position is named, the position is argued, the reader is trusted to draw conclusions. Where we cannot verify a quote at the cited source, we drop it. Where a topic page would be misleading without a particular citation we can't locate, we acknowledge the limitation rather than fabricate.</p>
 </Base>
 
