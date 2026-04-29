@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 const topics = (await getCollection('topics')).sort((a, b) => a.data.order - b.data.order);
 ---
 <Base title="Dār al-Ḥaqq">
-  <p class="lede">Refutations of common Salafī claims, drawn from authoritative answers on SeekersGuidance, IslamQA.org, Ask Imam, and hadithanswers.com. Every claim cites a scholar and links the original fatwa.</p>
+  <p class="lede">Refutations of common Salafī claims, anchored in the Qurʾān and the Sunnah.</p>
   <h2 class="section-label">Topics</h2>
   <ul class="topics">
     {topics.map(topic => <TopicRow topic={topic} />)}
