@@ -1,16 +1,24 @@
 ---
 import Base from '../layouts/Base.astro';
 import Quote from '../components/Quote.astro';
+
+const toc = [
+  { id: 'shared', label: 'Shared ground' },
+  { id: 'attributes', label: '1. The divine attributes' },
+  { id: 'interpretive', label: '2. Literal vs. interpretive' },
+  { id: 'kalam', label: '3. The role of kalām' },
+  { id: 'pattern', label: 'The pattern' },
+];
 ---
-<Base title="ʿAqīdah differences" compactHeader={true}>
+<Base title="ʿAqīdah differences" compactHeader={true} toc={toc}>
   <p class="ar-title" lang="ar" dir="rtl">الفروق العقدية</p>
   <h2>ʿAqīdah differences</h2>
   <p class="summary">A comparative reading of the three flashpoints between Salafī ʿaqīdah and the classical Ashʿarī/Māturīdī Sunnī ʿaqīdah: the divine attributes, the relationship between literal and interpretive reading of mutashābih texts, and the legitimacy of kalām as a discipline.</p>
 
-  <h3>The shared ground</h3>
+  <h3 id="shared">The shared ground</h3>
   <p>Before the disagreements, the agreement: both sides affirm the absolute oneness of Allāh (<em>tawḥīd</em>), the transcendence of Allāh above any resemblance to created things (<em>tanzīh</em> or <em>laysa ka-mithlihi shayʾ</em>), the obligation to affirm everything the Qurʾān and authentic Sunnah affirm, and the impermissibility of describing Allāh in terms not found in the texts. Both sides reject anthropomorphism (<em>tashbīh</em>) and corporealism (<em>tajsīm</em>) as creedal errors. The disagreement is on how to read certain texts about the divine attributes that, taken at face value in human language, would imply something Allāh has explicitly denied of Himself.</p>
 
-  <h3>1. The divine attributes (al-Ṣifāt)</h3>
+  <h3 id="attributes">1. The divine attributes (al-Ṣifāt)</h3>
   <p>The Qurʾān and Sunnah ascribe to Allāh attributes that, in their apparent linguistic meaning, would parallel attributes of created things — a "hand" (<em>yad</em>), a "face" (<em>wajh</em>), a "settling on the Throne" (<em>istiwāʾ</em> ʿalā al-ʿarsh), a "descent" (<em>nuzūl</em>) in the last third of the night. Both schools affirm that these texts are revealed and must be accepted; the question is how their meaning is to be understood given the verse <em>laysa ka-mithlihi shayʾ</em> ("there is nothing like Him") (Q 42:11).</p>
 
   <p><strong>The Salafī position.</strong> The Salafī school affirms each divine attribute in its apparent linguistic meaning, with the qualification "<em>bilā kayf</em>" — "without [knowing] the modality." That is: Allāh has a hand, a face, an <em>istiwāʾ</em> on the Throne — but the modality (<em>kayfiyya</em>) of these attributes is not knowable to created intellects, and is not to be likened to that of created things. The Salafī school rejects ta'wīl (interpretive reading away from the apparent meaning) as well as <em>tafwīḍ</em> in the form that consigns the meaning itself to Allāh's knowledge. The position traces to Imam Aḥmad, and is reflected in the phrase narrated from Imam Mālik — "the <em>istiwāʾ</em> is known, how it is is unknown, asking about it is an innovation."</p>
@@ -33,7 +41,7 @@ import Quote from '../components/Quote.astro';
 
   <p><strong>Where the Salafī position runs into difficulty.</strong> The position holds that the apparent linguistic meaning of "yad," "wajh," "istiwāʾ," "nuzūl" is real, qualified by <em>bilā kayf</em> — without modality. The internal difficulty: the apparent linguistic meaning of "yad" in Arabic is a body-part. To say "the apparent meaning is real but not like a created hand" is either to perform ta'wīl (specifying that the meaning is not the literal body-part — which the position formally rejects) or to leave the affirmation contentless (the meaning is the apparent one, but it is not what the apparent one signifies — which is contradictory). The classical Sunnī position resolves this by either <em>tafwīḍ</em> (declining to specify a meaning at all) or by <em>ta'wīl</em> (specifying a non-body-part meaning that classical Arabic supports — e.g., "yad" as "power" or "favour," the same usage Q 5:64 employs in <em>yadāhu mabsūṭatān</em>). The Salafī position rejects both resolutions while needing one of them to avoid either contradiction or anthropomorphism.</p>
 
-  <h3>2. Literal vs. interpretive (Ẓāhir vs. Ta'wīl)</h3>
+  <h3 id="interpretive">2. Literal vs. interpretive (Ẓāhir vs. Ta'wīl)</h3>
   <p>The deeper question is hermeneutic. Both sides agree that some Qurʾānic passages are <em>muḥkam</em> (clear in meaning) and others <em>mutashābih</em> (susceptible to multiple meanings, requiring qualification). The disagreement is about what the right response to a mutashābih verse is.</p>
 
   <p><strong>The Salafī position.</strong> The Salafī school argues that the apparent (<em>ẓāhir</em>) meaning of a Qurʾānic word is its actual meaning unless an explicit textual indicator says otherwise. To depart from the <em>ẓāhir</em> without such an indicator is <em>taḥrīf</em> — distortion. Therefore, where the Qurʾān or authentic Sunnah affirms a divine attribute in apparent terms, that attribute is real in the apparent linguistic sense — only the <em>kayfiyya</em> is unknown. The IslamQA.info answer on this point is unambiguous:</p>
@@ -58,7 +66,7 @@ import Quote from '../components/Quote.astro';
 
   <p><strong>The al-Ibāna question.</strong> A frequent Salafī claim — that Imam al-Ashʿarī "returned to" Atharī creed at the end of his life, citing <em>al-Ibāna ʿan Uṣūl al-Diyāna</em> — has been examined at scholarly length and rebutted. The ḥadīth master Ibn ʿAsākir's <em>Tabyīn Kadhib al-Muftarī fī mā Nusiba ilā al-Imām al-Ashʿarī</em> documents that the chains of narration for the attributed recantation contain liars in every link. Imam al-Kawtharī in <em>al-Sayf al-Ṣaqīl</em> (p. 108) notes that <em>al-Ibāna</em> was written <em>early</em> — right after al-Ashʿarī's break from Muʿtazilism — and was an attempt to induce the Ḥanbalī literalist al-Barbahārī (d. 328 AH) to embrace mainstream Sunnī tenets, not a final-life recantation. Ḥāfiẓ al-Dhahabī corroborates this in <em>Siyar Aʿlām al-Nubalāʾ</em> 15.90. The text of <em>al-Ibāna</em> itself uses kalām-style argumentation throughout — the very methodology the citation is meant to disavow.</p>
 
-  <h3>3. The role of kalām (dialectical theology)</h3>
+  <h3 id="kalam">3. The role of kalām (dialectical theology)</h3>
   <p>Kalām is the discipline of using rational argument to defend creedal claims. It emerged in the late 2nd / early 3rd Hijri century in response to the Muʿtazila and the influx of Greek philosophy into the Muslim world. Both Ashʿarism and Māturīdism are kalām schools.</p>
 
   <p><strong>The Salafī position.</strong> The Salafī movement classifies kalām as a blameworthy innovation. The argument: the Companions and the early Salaf did not engage in dialectical theology, and the discipline is liable to lead its practitioners into philosophical errors that the simple textual creed of the Salaf would have avoided. Ibn Taymiyya's <em>Darʾ Taʿāruḍ al-ʿAql wa-l-Naql</em> ("Repulsing the Conflict between Reason and Revelation") is the foundational Salafī treatment of this stance. Imam al-Shāfiʿī's statement — "whoever occupies himself with kalām is likely to go astray" — is frequently cited; the Salafī position takes this as a general condemnation of the discipline rather than a contextual caution. <em>(No verbatim online Salafī source with a confirmed URL could be located at time of writing; a source will be added when one is verified.)</em></p>
@@ -74,7 +82,7 @@ import Quote from '../components/Quote.astro';
 
   <p><strong>Where the Salafī position runs into difficulty.</strong> The position holds that <em>kalām</em> is an illegitimate innovation, foreign to the Salaf's methodology. The internal difficulty: the foundational Salafī polemical works are themselves exercises in <em>kalām</em> in the technical sense — using rational argument to defend creedal claims against philosophical and inter-religious challenges. Ibn Taymiyya's <em>Darʾ Taʿāruḍ al-ʿAql wa-l-Naql</em> is structured around the relationship between reason and revelation — a classic kalām question, treated in classic kalām terms. Ibn al-Qayyim's <em>al-Ṣawāʿiq al-Mursala</em> is a substantial kalām engagement with the Jahmiyya. The position rejects in principle what it deploys in practice when the philosophical challenges arise. The classical Sunnī position — that kalām is <em>farḍ kifāyah</em>, a communal obligation when the religion is challenged philosophically — describes more accurately what the Salafī tradition actually does.</p>
 
-  <h3>The pattern</h3>
+  <h3 id="pattern">The pattern</h3>
   <p>The three difficulties above share a structure. Each presents the Salafī position with a methodological principle the position holds in theory: the apparent meaning is the operative meaning; explicit textual indicators are required to depart from the apparent meaning; <em>kalām</em> is foreign to the Salaf. Each then shows that the position's application of the principle is not consistent — it accepts ta'wīl where convenient and rejects it elsewhere; it does not allow <em>laysa ka-mithlihi shayʾ</em> to function as an indicator while accepting other verses in that role; it deploys kalām in practice while rejecting it in principle.</p>
   <p>None of this is to say the Salafī tradition has no scholarly content or that its concerns are illegitimate. The concern that any departure from the apparent meaning of a revealed text risks distortion is a serious one; the concern that kalām can lead its practitioners into philosophical errors that the Salaf would not have recognised is a serious one. The classical Sunnī position takes both concerns seriously — it does not authorise unrestricted ta'wīl or unconstrained kalām. What it adds is a more disciplined reading of the texts and a more precise account of when interpretive tools are necessary, anchored in the four-madhhab uṣūl al-fiqh tradition that the Salafī movement has substantially set aside.</p>
 
@@ -87,6 +95,5 @@ import Quote from '../components/Quote.astro';
   .summary { font-style: italic; color: var(--ink-secondary); margin-bottom: 22px; }
   strong { font-weight: 600; color: var(--navy); }
   em { color: var(--ink-secondary); }
-  h3 { margin-top: 32px; }
   p { margin-bottom: 12px; }
 </style>

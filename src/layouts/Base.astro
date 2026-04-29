@@ -1,17 +1,25 @@
 ---
 import '../styles/global.css';
 
+interface TocItem {
+  id: string;
+  label: string;
+}
+
 interface Props {
   title: string;
   description?: string;
   /** when true, renders a smaller H1 (used on inner pages) */
   compactHeader?: boolean;
+  /** when provided, renders a sticky right-rail ToC on desktop */
+  toc?: TocItem[];
 }
 
-const { title, description, compactHeader = false } = Astro.props;
+const { title, description, compactHeader = false, toc } = Astro.props;
 const fullTitle = title === 'Dār al-Ḥaqq' ? title : `${title} — Dār al-Ḥaqq`;
 const pageDescription = description ?? 'Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, and the Ashʿarī, Māturīdī, and Atharī (Ḥanbalī) schools.';
 const currentPath = Astro.url.pathname;
+const currentYear = new Date().getFullYear();
 
 // Mark a nav link active if its href matches the current path exactly,
 // or if currentPath starts with href + '/' (for nested topic detail pages).
@@ -31,11 +39,16 @@ const isActive = (href: string): boolean => {
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:image" content="/og-image.svg" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
+    <!-- Skip-to-content link (a11y) -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -94,6 +107,7 @@ const isActive = (href: string): boolean => {
       <nav class="snav" aria-label="About">
         <p class="snav-label">About</p>
         <ul>
+          <li><a href="/search" class={isActive('/search') ? 'active' : ''}>Search</a></li>
           <li><a href="/sources" class={isActive('/sources') ? 'active' : ''}>Sources</a></li>
           <li><a href="/about" class={isActive('/about') ? 'active' : ''}>About</a></li>
         </ul>
@@ -102,7 +116,7 @@ const isActive = (href: string): boolean => {
 
     <div class="scrim" id="scrim" aria-hidden="true"></div>
 
-    <main class="content-wrap">
+    <main class={`content-wrap${toc && toc.length > 0 ? ' has-toc' : ''}`} id="main">
       <header class="page-head">
         {!compactHeader && (
           <>
@@ -116,9 +130,27 @@ const isActive = (href: string): boolean => {
         <slot />
       </article>
 
+      {toc && toc.length > 0 && (
+        <nav class="toc" aria-label="On this page">
+          <p class="toc-label">On this page</p>
+          <ul>
+            {toc.map((item) => (
+              <li><a href={`#${item.id}`}>{item.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      )}
+
       <footer class="site-foot">
         <p class="duaa"><em>Allāhumma arinā al-ḥaqqa ḥaqqan wa-rzuqnā ittibāʿahu, wa-arinā al-bāṭila bāṭilan wa-rzuqnā ijtinābahu.</em></p>
-        <p class="suggest"><a href="https://github.com/YusefB/darulhaqq/issues/new" rel="noopener external">Suggest a topic</a></p>
+        <div class="foot-links">
+          <a href="https://github.com/YusefB/darulhaqq/issues/new" rel="noopener external">Suggest a topic</a>
+          <span class="foot-sep" aria-hidden="true">·</span>
+          <a href="https://github.com/YusefB/darulhaqq" rel="noopener external">View source</a>
+          <span class="foot-sep" aria-hidden="true">·</span>
+          <a href="/about">About</a>
+        </div>
+        <p class="foot-copy">© 2025–{currentYear} Dār al-Ḥaqq · CC BY 4.0</p>
       </footer>
     </main>
 
@@ -135,9 +167,51 @@ const isActive = (href: string): boolean => {
       toggle?.addEventListener('click', () => setOpen(!sidebar?.classList.contains('open')));
       scrim?.addEventListener('click', () => setOpen(false));
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+
+      // ToC intersection observer — highlight active section
+      const tocLinks = document.querySelectorAll('.toc a');
+      if (tocLinks.length > 0) {
+        const headings = document.querySelectorAll('.content h3[id]');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              tocLinks.forEach((link) => link.classList.remove('active'));
+              const activeLink = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+              activeLink?.classList.add('active');
+            }
+          });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        headings.forEach((h) => observer.observe(h));
+      }
     </script>
 
     <style>
+      /* === Skip link (a11y) === */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        font-family: var(--sans);
+        font-size: 14px;
+        background: var(--navy);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 0 0 6px 0;
+        z-index: 200;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        overflow: visible;
+      }
+
       /* === Sidebar === */
       .sidebar {
         position: fixed;
@@ -238,12 +312,79 @@ const isActive = (href: string): boolean => {
       }
       .scrim.open { opacity: 1; pointer-events: auto; }
 
-      /* === Content wrap === */
+      /* === Content wrap (normal) === */
       .content-wrap {
         margin-left: 240px;
         max-width: 720px;
         padding: 24px 32px 0;
       }
+
+      /* === Content wrap with right-rail ToC === */
+      @media (min-width: 1100px) {
+        .content-wrap.has-toc {
+          display: grid;
+          grid-template-columns: 1fr 200px;
+          grid-template-rows: auto 1fr auto;
+          gap: 0 48px;
+          max-width: 980px;
+        }
+        /* page-head spans full width */
+        .content-wrap.has-toc > .page-head {
+          grid-column: 1 / -1;
+        }
+        /* footer spans full width */
+        .content-wrap.has-toc > .site-foot {
+          grid-column: 1 / -1;
+        }
+        /* ToC in the right column */
+        .content-wrap.has-toc > .toc {
+          grid-column: 2;
+          grid-row: 2;
+        }
+        /* Article in the left column */
+        .content-wrap.has-toc > .content {
+          grid-column: 1;
+          grid-row: 2;
+          min-width: 0;
+        }
+      }
+
+      /* === ToC === */
+      .toc {
+        position: sticky;
+        top: 32px;
+        align-self: start;
+        font-family: var(--sans);
+        font-size: 13px;
+        border-left: 1px solid var(--rule-warm-soft);
+        padding-left: 16px;
+      }
+      .toc-label {
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold-dim);
+        font-weight: 600;
+        margin: 0 0 8px;
+      }
+      .toc ul { list-style: none; padding: 0; margin: 0; }
+      .toc li { margin-bottom: 6px; }
+      .toc a {
+        color: var(--ink-secondary);
+        text-decoration: none;
+        line-height: 1.35;
+        display: block;
+        padding: 2px 0 2px 8px;
+        border-left: 2px solid transparent;
+        margin-left: -8px;
+      }
+      .toc a:hover { color: var(--navy-link); }
+      .toc a.active { color: var(--navy); border-left-color: var(--gold); font-weight: 600; }
+      @media (max-width: 1099px) {
+        .content-wrap.has-toc { grid-template-columns: 1fr; }
+        .toc { display: none; }
+      }
+
       .page-head { margin-bottom: 16px; }
       .page-tagline { font-style: italic; color: var(--ink-secondary); font-size: 15px; margin: 16px 0 14px; }
       .pattern {
@@ -251,16 +392,45 @@ const isActive = (href: string): boolean => {
         margin-bottom: 8px;
         background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 6px, transparent 6px, transparent 12px);
       }
-      .content { padding: 12px 0 48px; }
+      .content {
+        padding: 12px 0 48px;
+      }
+      /* Typography polish — inner page headings */
+      .content h2 { font-size: 28px; line-height: 1.2; }
+      .content h3 {
+        font-size: 19px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        text-transform: none;
+        color: var(--navy);
+        margin: 32px 0 10px;
+      }
 
       .site-foot {
         border-top: 1px solid var(--rule-warm);
         margin-top: 64px;
         padding: 24px 0 48px;
       }
-      .site-foot .duaa { font-size: 14px; color: var(--ink-secondary); margin-bottom: 8px; }
-      .site-foot .suggest { font-family: var(--sans); font-size: 13px; }
-      .site-foot .suggest a { color: var(--navy-link); }
+      .site-foot .duaa { font-size: 14px; color: var(--ink-secondary); margin-bottom: 10px; }
+      .foot-links {
+        font-family: var(--sans);
+        font-size: 13px;
+        color: var(--ink-tertiary);
+        margin-bottom: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 6px;
+        align-items: center;
+      }
+      .foot-links a { color: var(--navy-link); text-decoration: none; }
+      .foot-links a:hover { text-decoration: underline; }
+      .foot-sep { color: var(--rule-warm); }
+      .foot-copy {
+        font-family: var(--sans);
+        font-size: 12px;
+        color: var(--ink-tertiary);
+        margin: 0;
+      }
 
       /* === Responsive === */
       @media (max-width: 899px) {

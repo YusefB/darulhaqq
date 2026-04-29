@@ -1,14 +1,22 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const toc = [
+  { id: 'intro', label: 'Common ground' },
+  { id: 'ibn-taymiyya', label: 'Ibn Taymiyya' },
+  { id: 'albani', label: 'al-Albānī' },
+  { id: 'ibn-baz', label: 'Ibn Bāz' },
+  { id: 'uthaymin', label: 'Ibn al-ʿUthaymīn' },
+];
 ---
-<Base title="Scholar case studies" compactHeader={true}>
+<Base title="Scholar case studies" compactHeader={true} toc={toc}>
   <p class="ar-title" lang="ar" dir="rtl">تراجم العلماء</p>
   <h2>Scholar case studies</h2>
   <p class="summary">Sourced biographical-and-methodological sketches of four scholars whose names are central to the Salafī movement and to its disagreement with the classical Sunnī mainstream — Ibn Taymiyya, Muḥammad Nāṣir al-Dīn al-Albānī, ʿAbd al-ʿAzīz ibn Bāz, and Muḥammad ibn al-ʿUthaymīn. For each: a biographical snapshot, the scholar's methodology, their influence, the documented critiques from named Sunnī scholars, and a closing note on where the position aligns with — and departs from — the classical Sunnī mainstream.</p>
 
   <p class="standards">The standard followed here is the same as the rest of the site: every claim is sourced; named critics are real scholars with real works; respect for genuine learning is preserved even where disagreement is total. None of these men is dismissed.</p>
 
-  <h3>Ibn Taymiyya (Taqī al-Dīn Aḥmad ibn ʿAbd al-Ḥalīm) — d. 728 AH / 1328 CE</h3>
+  <h3 id="ibn-taymiyya">Ibn Taymiyya (Taqī al-Dīn Aḥmad ibn ʿAbd al-Ḥalīm) — d. 728 AH / 1328 CE</h3>
 
   <p><strong>Biography.</strong> Born in Ḥarrān (modern southeastern Turkey, 1263 CE); his family fled the Mongol invasions and settled in Damascus when he was a child. Educated in the Ḥanbalī madhhab and rose to prominence as a polemicist and jurist. Imprisoned multiple times by the Mamlūk authorities in Damascus and Cairo over various rulings — including a controversial fatwa on triple-divorce and his rejection of mainstream tawassul and ziyāra. Died in the Damascus citadel in 728 AH after his ink and writing materials were confiscated.</p>
 
@@ -22,7 +30,7 @@ import Base from '../layouts/Base.astro';
 
   <p><strong>Where the position runs into difficulty.</strong> Ibn Taymiyya's specific creedal departures cannot be traced to "the Ḥanbalī mainstream" before him. Imam Ibn Qudāma al-Maqdisī (d. 620 AH) — the foundational Ḥanbalī jurist whose works are canonical in the school — does not affirm direction (<em>jihah</em>) for Allāh in <em>Lumʿat al-Iʿtiqād</em>. Ibn al-Jawzī (d. 597 AH), another major Ḥanbalī, wrote <em>Daf' Shubah al-Tashbīh</em> — explicitly a refutation of the very anthropomorphism-leaning readings later associated with Ibn Taymiyya — from <em>within</em> the Ḥanbalī tradition, a century before his career. The Mamlūk authorities did not imprison Ibn Taymiyya for fidelity to the four madhāhib but for departing from them: his ruling that triple-ṭalāq pronounced in one sitting counts as one was rejected by all four madhāhib including the Ḥanbalī school he formally followed, and was the immediate cause of his final imprisonment in 726 AH. The classical Sunnī assessment of him as a major scholar with specific creedal departures is not the assessment of opponents; it is, in part, the assessment of his own student.</p>
 
-  <h3>Muḥammad Nāṣir al-Dīn al-Albānī — d. 1420 AH / 1999 CE</h3>
+  <h3 id="albani">Muḥammad Nāṣir al-Dīn al-Albānī — d. 1420 AH / 1999 CE</h3>
 
   <p><strong>Biography.</strong> Born in Shkodër, Albania (1914 CE); his family migrated to Damascus when he was nine. He did not pass through the classical Sunnī education path of formal isnād-based ijāzah-bearing teachers in ḥadīth, and instead developed his expertise through extensive personal reading in the Ẓāhiriyya Library in Damascus. He worked initially as a watch repairman before devoting himself full-time to ḥadīth study. He never held a formal teaching post in any of the major Sunnī institutions; he taught informally and through prolific writing. He was at various times expelled from Syria and from Saudi Arabia, and lived in Amman, Jordan, under restricted conditions until his death in 1999.</p>
 
@@ -51,7 +59,7 @@ import Base from '../layouts/Base.astro';
 
   <p><strong>Where the position runs into difficulty.</strong> The structural problem is the gap between methodological claim and methodological practice. The claim is fidelity to "the Qurʾān and Sunnah upon the understanding of the Salaf." The practice — re-grading the canonical compilers, suspending the four madhāhib, declaring the historical mainstream of Sunnī ʿaqīdah outside the fold, calling for the demolition of the most-visited site in Sunnī devotional life — describes not a recovery of the Salaf's understanding but the construction of a new individual ijtihād presented as their understanding. The Deobandī, Barelvī, traditional Shāfiʿī, and Mālikī establishments all answer the same question — whether ḥadīth grading and madhhab-suspending fiqh can be exercised by an individual outside the inherited isnād chain — with no. Al-Albānī answered yes. The disagreement is not a matter of personalities; it is a matter of what counts as continuity with the Salaf in the first place.</p>
 
-  <h3>ʿAbd al-ʿAzīz ibn Bāz — d. 1420 AH / 1999 CE</h3>
+  <h3 id="ibn-baz">ʿAbd al-ʿAzīz ibn Bāz — d. 1420 AH / 1999 CE</h3>
 
   <p><strong>Biography.</strong> Born in Riyadh (1912 CE) into a religious family. Lost his sight progressively in his youth, becoming totally blind by his early twenties. Educated in the Saudi religious establishment of his era — a small circle of Najdī Wahhābī scholars — and rose through it: judge, then president of the Islamic University of Medina, then head of the Permanent Committee for Iftāʾ, and from 1993 until his death the Grand Mufti of the Kingdom of Saudi Arabia.</p>
 
@@ -65,7 +73,7 @@ import Base from '../layouts/Base.astro';
 
   <p><strong>Where the position runs into difficulty.</strong> The recurring pattern in the documented critiques is the gap between the institutional authority Ibn Bāz exercised — Grand Mufti of the kingdom that hosts the two Holy Cities — and the textual basis of specific rulings he issued. The geocentric fatwa, the Gulf War fatwa, and his rulings on women's mobility each drew their authority from his office and from Saudi state media reach more than from inherited four-madhhab uṣūl. The classical Sunnī critique is not that he was personally insincere — by every account he was pious and learned within his school — but that the rulings of an institutional muftī require an evidentiary discipline that the documented record sometimes shows missing.</p>
 
-  <h3>Muḥammad ibn Ṣāliḥ al-ʿUthaymīn — d. 1421 AH / 2001 CE</h3>
+  <h3 id="uthaymin">Muḥammad ibn Ṣāliḥ al-ʿUthaymīn — d. 1421 AH / 2001 CE</h3>
 
   <p><strong>Biography.</strong> Born in ʿUnayza, Saudi Arabia (1925 CE). Studied with Saudi Salafī scholars including ʿAbd al-Raḥmān ibn al-Saʿdī (a major teacher of his generation) and ibn Bāz. Held the position of khaṭīb at the Grand Mosque of ʿUnayza for over five decades; member of the Saudi Council of Senior Scholars; taught generations of Saudi-trained Salafī scholars and lay Muslims. Died in Mecca in 2001.</p>
 
@@ -79,7 +87,7 @@ import Base from '../layouts/Base.astro';
 
   <p><strong>Where the position runs into difficulty.</strong> Ibn al-ʿUthaymīn's own claim is to be Ḥanbalī. The four-madhhab assessment is that "Ḥanbalī when convenient, departing-from-Ḥanbalī when an alternative reading is preferred" is not the same thing as the Ḥanbalī madhhab as classically transmitted. Imam Aḥmad ibn Ḥanbal, Ibn Qudāma, al-Mardāwī, al-Buhūtī — the canonical Ḥanbalī scholars whose works define the school — operated under the discipline of the school's <em>uṣūl</em>, not selectively. The claim to be inside a madhhab while operating under a methodology that suspends the madhhab on demand is internally unstable, and is the structural difficulty that al-Būṭī and the wider classical Sunnī establishment have flagged.</p>
 
-  <h3>Common ground</h3>
+  <h3 id="intro">Common ground</h3>
 
   <p>Each of the four scholars above is recognised by their critics as a serious scholar within their tradition. The classical Sunnī establishment of their respective eras did not declare them outside Islam, did not anathematise them as individuals, and treated their works as worthy of substantive refutation rather than dismissal — a practice the topic pages on this site try to mirror. The disagreements with them are real and specific, anchored in named earlier scholars and named earlier works. Where a critique is advanced on this site, a reader can follow the citation back to its source and assess it themselves.</p>
 </Base>
@@ -89,7 +97,6 @@ import Base from '../layouts/Base.astro';
   h2 { margin: 0 0 8px; }
   .summary { font-style: italic; color: var(--ink-secondary); margin-bottom: 16px; }
   .standards { font-size: 14px; color: var(--ink-tertiary); padding: 12px 16px; border-left: 3px solid var(--rule-warm); background: var(--bg-paper-light); margin-bottom: 32px; }
-  h3 { margin-top: 40px; }
   strong { font-weight: 600; color: var(--navy); }
   em { color: var(--ink-secondary); }
   p { margin-bottom: 12px; }
