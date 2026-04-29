@@ -11,6 +11,14 @@ interface Props {
 const { title, description, compactHeader = false } = Astro.props;
 const fullTitle = title === 'Dār al-Ḥaqq' ? title : `${title} — Dār al-Ḥaqq`;
 const pageDescription = description ?? 'Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.';
+const currentPath = Astro.url.pathname;
+
+// Mark a nav link active if its href matches the current path exactly,
+// or if currentPath starts with href + '/' (for nested topic detail pages).
+const isActive = (href: string): boolean => {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(href + '/');
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -28,50 +36,183 @@ const pageDescription = description ?? 'Traditional Sunni Islam — the ʿaqīda
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <header class="site-head">
-      <div class="shell">
-        <div class="arabic head-ar" lang="ar" dir="rtl">دار الحق</div>
-        <a class="brand" href="/">
-          <h1 class={compactHeader ? 'compact' : ''}>Dār al-Ḥaqq</h1>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <aside class="sidebar" id="sidebar" aria-label="Site sections">
+      <div class="brand-block">
+        <a href="/" class="brand-link">
+          <p class="brand-ar" lang="ar" dir="rtl">دار الحق</p>
+          <p class="brand-en">Dār al-Ḥaqq</p>
         </a>
-        {!compactHeader && (
-          <p class="tagline">Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.</p>
-        )}
-        <nav class="topnav">
-          <a href="/topics">Topics</a>
-          <a href="/sources">Sources</a>
-          <a href="/about">About</a>
-        </nav>
       </div>
-      <div class="pattern" aria-hidden="true"></div>
-    </header>
 
-    <main class="shell content">
-      <slot />
-    </main>
+      <nav class="snav" aria-label="Read">
+        <p class="snav-label">Read</p>
+        <ul>
+          <li><a href="/" class={isActive('/') ? 'active' : ''}>Origins</a></li>
+          <li><a href="/methodology" class={isActive('/methodology') ? 'active' : ''}>Methodology</a></li>
+          <li><a href="/aqidah-differences" class={isActive('/aqidah-differences') ? 'active' : ''}>ʿAqīdah differences</a></li>
+        </ul>
+      </nav>
 
-    <footer class="site-foot">
-      <div class="shell">
+      <nav class="snav" aria-label="Topics">
+        <p class="snav-label">Topics</p>
+        <ul>
+          <li><a href="/topics" class={currentPath === '/topics' ? 'active' : ''}>All topics</a></li>
+          <li><a href="/topics/mawlid" class={isActive('/topics/mawlid') ? 'active' : ''}>Mawlid</a></li>
+          <li><a href="/topics/group-dhikr" class={isActive('/topics/group-dhikr') ? 'active' : ''}>Group dhikr</a></li>
+          <li><a href="/topics/visiting-graves" class={isActive('/topics/visiting-graves') ? 'active' : ''}>Visiting graves</a></li>
+          <li><a href="/topics/tawassul" class={isActive('/topics/tawassul') ? 'active' : ''}>Tawassul</a></li>
+          <li><a href="/topics/ashari-maturidi-creed" class={isActive('/topics/ashari-maturidi-creed') ? 'active' : ''}>Ashʿarī &amp; Māturīdī</a></li>
+          <li><a href="/topics/ibn-taymiyyah-aqidah" class={isActive('/topics/ibn-taymiyyah-aqidah') ? 'active' : ''}>Ibn Taymiyyah</a></li>
+        </ul>
+      </nav>
+
+      <nav class="snav" aria-label="About">
+        <p class="snav-label">About</p>
+        <ul>
+          <li><a href="/sources" class={isActive('/sources') ? 'active' : ''}>Sources</a></li>
+          <li><a href="/about" class={isActive('/about') ? 'active' : ''}>About</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="scrim" id="scrim" aria-hidden="true"></div>
+
+    <main class="content-wrap">
+      <header class="page-head">
+        {!compactHeader && (
+          <>
+            <p class="page-tagline">Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.</p>
+            <div class="pattern" aria-hidden="true"></div>
+          </>
+        )}
+      </header>
+
+      <article class="content">
+        <slot />
+      </article>
+
+      <footer class="site-foot">
         <p class="duaa"><em>Allāhumma arinā al-ḥaqqa ḥaqqan wa-rzuqnā ittibāʿahu, wa-arinā al-bāṭila bāṭilan wa-rzuqnā ijtinābahu.</em></p>
         <p class="suggest"><a href="https://github.com/YusefB/darulhaqq/issues/new" rel="noopener external">Suggest a topic</a></p>
-      </div>
-    </footer>
+      </footer>
+    </main>
+
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      const scrim = document.getElementById('scrim');
+      function setOpen(open: boolean) {
+        sidebar?.classList.toggle('open', open);
+        scrim?.classList.toggle('open', open);
+        toggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      toggle?.addEventListener('click', () => setOpen(!sidebar?.classList.contains('open')));
+      scrim?.addEventListener('click', () => setOpen(false));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+    </script>
 
     <style>
-      .site-head { padding-top: 36px; }
-      .head-ar { font-size: 22px; color: var(--navy); margin-bottom: 4px; font-weight: 700; }
-      .brand { text-decoration: none; }
-      .brand h1 { color: var(--navy); margin: 0 0 4px; }
-      .brand h1.compact { font-size: 22px; }
-      .tagline { font-style: italic; color: var(--ink-secondary); font-size: 15px; margin: 0 0 14px; }
-      .topnav { font-family: var(--sans); font-size: 13px; letter-spacing: 0.04em; }
-      .topnav a { color: var(--navy-link); margin-right: 16px; text-decoration: underline; }
+      /* === Sidebar === */
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 240px;
+        height: 100vh;
+        background: var(--bg-paper);
+        border-right: 1px solid var(--rule-warm);
+        padding: 32px 20px 24px;
+        overflow-y: auto;
+        z-index: 20;
+      }
+      .brand-block { margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--rule-warm-soft); }
+      .brand-link { text-decoration: none; display: block; }
+      .brand-ar { font-family: var(--arabic); font-size: 22px; color: var(--navy); margin: 0 0 2px; font-weight: 700; }
+      .brand-en { font-family: var(--sans); font-size: 18px; color: var(--navy); font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+
+      .snav { margin-bottom: 24px; }
+      .snav-label {
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold-dim);
+        margin: 0 0 6px;
+      }
+      .snav ul { padding: 0; list-style: none; margin: 0; }
+      .snav li { margin: 0; }
+      .snav a {
+        display: block;
+        font-family: var(--serif);
+        font-size: 15px;
+        color: var(--ink-primary);
+        text-decoration: none;
+        padding: 4px 0 4px 8px;
+        border-left: 2px solid transparent;
+        line-height: 1.35;
+      }
+      .snav a:hover { color: var(--navy-link); }
+      .snav a.active {
+        color: var(--navy);
+        font-weight: 600;
+        border-left-color: var(--gold);
+      }
+
+      /* === Mobile menu toggle === */
+      .menu-toggle {
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        width: 44px;
+        height: 44px;
+        background: var(--bg-paper);
+        border: 1px solid var(--rule-warm);
+        border-radius: 6px;
+        cursor: pointer;
+        z-index: 30;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        padding: 0;
+      }
+      .menu-toggle .bar { width: 18px; height: 2px; background: var(--navy); display: block; }
+
+      .scrim {
+        position: fixed;
+        inset: 0;
+        background: rgba(24, 24, 24, 0.4);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s ease;
+        z-index: 15;
+      }
+      .scrim.open { opacity: 1; pointer-events: auto; }
+
+      /* === Content wrap === */
+      .content-wrap {
+        margin-left: 240px;
+        max-width: 720px;
+        padding: 24px 32px 0;
+      }
+      .page-head { margin-bottom: 16px; }
+      .page-tagline { font-style: italic; color: var(--ink-secondary); font-size: 15px; margin: 16px 0 14px; }
       .pattern {
         height: 4px;
-        margin-top: 14px;
+        margin-bottom: 8px;
         background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 6px, transparent 6px, transparent 12px);
       }
-      .content { padding: 28px 24px 48px; }
+      .content { padding: 12px 0 48px; }
+
       .site-foot {
         border-top: 1px solid var(--rule-warm);
         margin-top: 64px;
@@ -80,6 +221,21 @@ const pageDescription = description ?? 'Traditional Sunni Islam — the ʿaqīda
       .site-foot .duaa { font-size: 14px; color: var(--ink-secondary); margin-bottom: 8px; }
       .site-foot .suggest { font-family: var(--sans); font-size: 13px; }
       .site-foot .suggest a { color: var(--navy-link); }
+
+      /* === Responsive === */
+      @media (max-width: 899px) {
+        .menu-toggle { display: flex; }
+        .sidebar {
+          transform: translateX(-100%);
+          transition: transform 0.2s ease;
+        }
+        .sidebar.open { transform: translateX(0); }
+        .content-wrap { margin-left: 0; padding: 64px 24px 0; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .sidebar, .scrim { transition: none; }
+      }
     </style>
   </body>
 </html>
