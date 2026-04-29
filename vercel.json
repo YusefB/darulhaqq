@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/((?!maintenance\\.html|favicon\\.svg|favicon\\.ico|robots\\.txt|sitemap.*|og-image.*|pagefind/.*|_astro/.*).*)",
-      "destination": "/maintenance.html",
-      "statusCode": 307
-    }
-  ]
-}
