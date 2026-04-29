@@ -54,6 +54,7 @@ const isActive = (href: string): boolean => {
         <p class="snav-label">Read</p>
         <ul>
           <li><a href="/" class={isActive('/') ? 'active' : ''}>Origins</a></li>
+          <li><a href="/history" class={isActive('/history') ? 'active' : ''}>History</a></li>
           <li><a href="/methodology" class={isActive('/methodology') ? 'active' : ''}>Methodology</a></li>
           <li><a href="/aqidah-differences" class={isActive('/aqidah-differences') ? 'active' : ''}>ʿAqīdah differences</a></li>
         </ul>
@@ -69,6 +70,14 @@ const isActive = (href: string): boolean => {
           <li><a href="/topics/tawassul" class={isActive('/topics/tawassul') ? 'active' : ''}>Tawassul</a></li>
           <li><a href="/topics/ashari-maturidi-creed" class={isActive('/topics/ashari-maturidi-creed') ? 'active' : ''}>Ashʿarī &amp; Māturīdī</a></li>
           <li><a href="/topics/ibn-taymiyyah-aqidah" class={isActive('/topics/ibn-taymiyyah-aqidah') ? 'active' : ''}>Ibn Taymiyyah</a></li>
+        </ul>
+      </nav>
+
+      <nav class="snav" aria-label="Reference">
+        <p class="snav-label">Reference</p>
+        <ul>
+          <li><a href="/scholars" class={isActive('/scholars') ? 'active' : ''}>Scholars</a></li>
+          <li><a href="/library" class={isActive('/library') ? 'active' : ''}>Library</a></li>
         </ul>
       </nav>
 
