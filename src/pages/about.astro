@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="About" compactHeader={true}>
+  <p class="ar-title" lang="ar" dir="rtl">حول دار الحق</p>
+  <div class="pattern about-pattern" aria-hidden="true"></div>
   <h2>About Dār al-Ḥaqq</h2>
 
   <p>Dār al-Ḥaqq is a small, English-language reader of traditional Sunnī replies to common Salafī claims. Each topic is built around quoted excerpts from authoritative answers on SeekersGuidance, IslamQA.org, Ask Imam, and hadithanswers.com — the work belongs to those scholars and sites. Dār al-Ḥaqq simply gathers and frames it.</p>
@@ -10,3 +12,23 @@ import Base from '../layouts/Base.astro';
 
   <p>To suggest a topic, correct an error, or flag a misattributed quote, <a href="https://github.com/YusefB/darulhaqq/issues/new" rel="noopener external">open an issue on GitHub</a>. Corrections are taken seriously.</p>
 </Base>
+
+<style>
+  .ar-title {
+    font-family: var(--arabic);
+    font-size: 26px;
+    color: var(--navy);
+    text-align: right;
+    direction: rtl;
+    margin: 0 0 10px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .about-pattern {
+    height: 4px;
+    margin-bottom: 18px;
+    background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 6px, transparent 6px, transparent 12px);
+  }
+  h2 { margin: 0 0 16px; }
+  p { margin-bottom: 14px; }
+</style>
