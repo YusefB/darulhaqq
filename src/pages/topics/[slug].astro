@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Quote from '../../components/Quote.astro';
+import PrevNext from '../../components/PrevNext.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -16,6 +17,11 @@ interface Props { topic: CollectionEntry<'topics'>; }
 const { topic } = Astro.props;
 const { Content } = await topic.render();
 const { title, arabicTitle, summary, sources, updated } = topic.data;
+
+const allTopics = (await getCollection('topics')).sort((a, b) => a.data.order - b.data.order);
+const currentIndex = allTopics.findIndex(t => t.slug === topic.slug);
+const prev = currentIndex > 0 ? allTopics[currentIndex - 1] : null;
+const next = currentIndex < allTopics.length - 1 ? allTopics[currentIndex + 1] : null;
 ---
 <Base title={title} description={summary} compactHeader={true}>
   <p class="crumb"><a href="/">Topics</a> &rsaquo; {title}</p>
@@ -46,6 +52,11 @@ const { title, arabicTitle, summary, sources, updated } = topic.data;
   </p>
 
   <p class="updated">Last updated {updated}</p>
+
+  <PrevNext
+    prev={prev ? { href: `/topics/${prev.slug}`, title: prev.data.title } : null}
+    next={next ? { href: `/topics/${next.slug}`, title: next.data.title } : null}
+  />
 </Base>
 
 <style>

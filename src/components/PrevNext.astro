@@ -1,0 +1,62 @@
+---
+interface Props {
+  prev?: { href: string; title: string } | null;
+  next?: { href: string; title: string } | null;
+}
+const { prev, next } = Astro.props;
+---
+<nav class="prev-next" aria-label="Topic navigation">
+  {prev ? (
+    <a class="link prev" href={prev.href} rel="prev">
+      <span class="dir" aria-hidden="true">← Previous</span>
+      <span class="title">{prev.title}</span>
+    </a>
+  ) : <span class="link prev disabled" aria-hidden="true"></span>}
+  {next ? (
+    <a class="link next" href={next.href} rel="next">
+      <span class="dir" aria-hidden="true">Next →</span>
+      <span class="title">{next.title}</span>
+    </a>
+  ) : <span class="link next disabled" aria-hidden="true"></span>}
+</nav>
+
+<style>
+  .prev-next {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 48px 0 16px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule-warm-soft);
+  }
+  .link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 14px 16px;
+    border: 1px solid var(--rule-warm);
+    background: var(--bg-paper-light);
+    transition: background 0.12s ease;
+  }
+  .link:hover { background: var(--bg-paper); border-color: var(--gold); }
+  .link.disabled { background: transparent; border-color: transparent; }
+  .link.next { text-align: right; }
+  .dir {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 4px;
+  }
+  .title {
+    font-family: var(--serif);
+    color: var(--navy);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  @media (max-width: 720px) {
+    .prev-next { grid-template-columns: 1fr; }
+    .link.next { text-align: left; }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import Search from 'astro-pagefind/components/Search';
+---
+<Base title="Search" compactHeader={true}>
+  <h2>Search</h2>
+  <p class="lede">Full-text search across every page on the site — topic prose, Quote excerpts, scholar bios, methodology entries, and the classical-works library.</p>
+
+  <div class="search-wrap">
+    <Search id="search" className="pagefind-ui" uiOptions={{ showImages: false, showSubResults: true, resetStyles: false }} />
+  </div>
+</Base>
+
+<style>
+  .lede { font-style: italic; color: var(--ink-secondary); margin-bottom: 22px; max-width: 580px; line-height: 1.55; }
+  .search-wrap { margin-top: 12px; }
+  /* Light overrides for the Pagefind UI to match site palette */
+  :global(.pagefind-ui__search-input) {
+    font-family: var(--serif) !important;
+    background: var(--bg-paper-light) !important;
+    border: 1px solid var(--rule-warm) !important;
+    color: var(--ink-primary) !important;
+    padding: 10px 14px !important;
+    font-size: 16px !important;
+    border-radius: 0 !important;
+  }
+  :global(.pagefind-ui__search-input:focus) {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+  :global(.pagefind-ui__result-link) { color: var(--navy-link) !important; font-weight: 600 !important; }
+  :global(.pagefind-ui__result-excerpt) { color: var(--ink-primary) !important; }
+  :global(.pagefind-ui__result-tags) { color: var(--gold-dim) !important; }
+  :global(mark) { background: rgba(201, 161, 74, 0.25) !important; color: inherit !important; }
+</style>
