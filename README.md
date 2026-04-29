@@ -1,51 +1,45 @@
-# Astro Starter Kit: Minimal
+# Dār al-Ḥaqq
 
-```sh
-npm create astro@latest -- --template minimal
+Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.
+
+Static Astro site. Content lives in `src/content/topics/*.md`. Pages auto-render from the collection.
+
+## Local dev
+
+```bash
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # static output
+npm run preview  # serve the built site
 ```
 
-<!-- ASTRO:REMOVE:START -->
+## Adding a new topic
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+1. Create `src/content/topics/<slug>.md`. The slug becomes the URL: `/topics/<slug>`.
+2. Fill in the frontmatter (all fields required unless marked optional):
 
-<!-- ASTRO:REMOVE:END -->
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```yaml
+---
+title: "The English title"
+arabicTitle: "العنوان بالعربية"  # optional
+order: 6                          # display order on the homepage
+summary: "1–2 sentence summary."
+updated: "2026-04-28"
+sources:
+  - author: "Shaykh Name"
+    site: "SeekersGuidance"       # one of: SeekersGuidance | IslamQA.org | Ask Imam | hadithanswers.com
+    url: "https://..."
+    excerpt: "Verbatim quote, 80–200 words."
+    accessed: "2026-04-28"
+---
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Write 2–3 short framing sections in the markdown body (use `### Heading` for subheads — they render as gold small caps).
+4. Verify: `npx astro check && npm run build`.
+5. Commit and push. Vercel auto-deploys.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Sourcing rules
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Every `excerpt` must be verbatim from the linked URL — no paraphrasing.
+- If you can't verify a quote at the cited URL, drop it. Better fewer sources than fabricated ones.
+- Stick to the four whitelisted sites. Adding a new source site means updating `src/content/config.ts` and the Sources page.
