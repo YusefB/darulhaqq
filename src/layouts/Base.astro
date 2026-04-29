@@ -10,7 +10,7 @@ interface Props {
 
 const { title, description, compactHeader = false } = Astro.props;
 const fullTitle = title === 'Dār al-Ḥaqq' ? title : `${title} — Dār al-Ḥaqq`;
-const pageDescription = description ?? 'Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.';
+const pageDescription = description ?? 'Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, and the Ashʿarī, Māturīdī, and Atharī (Ḥanbalī) schools.';
 const currentPath = Astro.url.pathname;
 
 // Mark a nav link active if its href matches the current path exactly,
@@ -87,7 +87,7 @@ const isActive = (href: string): boolean => {
       <header class="page-head">
         {!compactHeader && (
           <>
-            <p class="page-tagline">Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, the Ashʿarī and Māturīdī schools.</p>
+            <p class="page-tagline">Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib, and the Ashʿarī, Māturīdī, and Atharī (Ḥanbalī) schools.</p>
             <div class="pattern" aria-hidden="true"></div>
           </>
         )}
