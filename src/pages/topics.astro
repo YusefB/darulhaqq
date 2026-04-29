@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import TopicRow from '../components/TopicRow.astro';
+import { getCollection } from 'astro:content';
+
+const topics = (await getCollection('topics')).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="Topics" compactHeader={true}>
+  <h2>Topics</h2>
+  <p class="lede">Refutations of common Salafī claims, anchored in the Qurʾān and the Sunnah.</p>
+  <ul class="topics">
+    {topics.map(topic => <TopicRow topic={topic} />)}
+  </ul>
+</Base>
+
+<style>
+  h2 { margin: 0 0 8px; }
+  .lede { font-style: italic; color: var(--ink-secondary); margin-bottom: 24px; }
+  .topics { padding: 0; list-style: none; }
+</style>

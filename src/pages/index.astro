@@ -1,28 +1,62 @@
 ---
 import Base from '../layouts/Base.astro';
-import TopicRow from '../components/TopicRow.astro';
-import { getCollection } from 'astro:content';
-
-const topics = (await getCollection('topics')).sort((a, b) => a.data.order - b.data.order);
 ---
 <Base title="Dār al-Ḥaqq">
-  <p class="lede">Refutations of common Salafī claims, anchored in the Qurʾān and the Sunnah.</p>
-  <h2 class="section-label">Topics</h2>
-  <ul class="topics">
-    {topics.map(topic => <TopicRow topic={topic} />)}
-  </ul>
+  <p class="ar-title" lang="ar" dir="rtl">أصول الحركة السلفية</p>
+  <h2>The origins of the Salafī movement</h2>
+  <p class="summary">A short history of where modern Salafism came from — the 18th-century Saud–Wahhāb pact in Najd, the Ottoman destruction of the first Saudi state, the British wartime alliance that built the modern Saudi kingdom alongside the Balfour Declaration, and the 20th-century globalisation of the movement.</p>
+
+  <h3>A new movement using an old name</h3>
+  <p>The Arabic word <em>salaf</em> means "predecessor" — the first three generations of Muslims, whose authority every Sunnī school accepts. The capitalised modern movement called "Salafism" is something else: a self-consciously revivalist project that took shape in the 18th century in the Najd region of central Arabia, and that has continued to develop into the present.</p>
+
+  <h3>The Saud–Wahhāb pact (1744)</h3>
+  <p>In 1744 Muhammad ibn ʿAbd al-Wahhāb (d. 1792) — a preacher from Najd whose anti-Sufi, anti-shrine theological project had been rejected by the scholarly establishment of his hometown of ʿUyaynah — formed an alliance with Muhammad ibn Saʿūd, the emir of the small oasis town of Diriyah. The pact was simple: ibn Saʿūd would militarily enforce ibn ʿAbd al-Wahhāb's reformist creed; ibn ʿAbd al-Wahhāb would provide religious legitimation for ibn Saʿūd's territorial ambitions. The first Saudi state expanded by force across the peninsula over the following seventy years.</p>
+
+  <h3>Ottoman response (1811–1818)</h3>
+  <p>By 1803–1805 the Wahhābī-Saudi forces had captured Mecca and Medina, expelling the Ottoman-appointed sharifate and imposing the new doctrine on the Holy Cities. Sultan Mahmud II tasked Muhammad ʿAlī Pasha of Egypt with the response. Muhammad ʿAlī's son Ibrāhīm Pasha destroyed the first Saudi state at the Battle of Diriyah in 1818; the Saudi capital was levelled, and the Saʿūd family was largely killed or scattered.</p>
+
+  <h3>British alliance with the second and third Saudi states</h3>
+  <p>The first Saudi state had no British backing. The second (1824–1891) and the third (1902–present) are a different story. From 1902 onwards, ʿAbd al-ʿAzīz ibn Saʿūd — the founder of the modern Saudi kingdom — operated in close coordination with the British government, which saw his movement as a useful counterweight to Ottoman power in Arabia.</p>
+  <p>The pivotal document is the <strong>Treaty of Darin</strong> (December 1915), signed between ibn Saʿūd and Sir Percy Cox, Britain's chief political officer in the Persian Gulf. The treaty established ibn Saʿūd as a British client in the Najd, paid him a monthly subsidy in gold, and supplied him with rifles. In exchange he agreed not to attack British protectorates and not to deal with rival powers. The same Britain was simultaneously negotiating with the Hashemite Sharif of Mecca (the McMahon-Hussein correspondence, 1915–1916) and secretly carving the region up with France (Sykes–Picot, 1916).</p>
+  <p>After the First World War, Britain backed ibn Saʿūd's defeat of the Hashemite kingdom of the Hijāz (1924–1925), which placed Mecca and Medina under Saudi rule. The <strong>Treaty of Jeddah</strong> (1927) formalised British recognition of Saudi sovereignty over the new state.</p>
+
+  <h3>Britain, Zionism, and the end of the Caliphate</h3>
+  <p>The British alliance with ibn Saʿūd was not an isolated piece of policy. Within twenty-four months of the Treaty of Darin (December 1915), the same British government issued the <strong>Balfour Declaration</strong> (November 1917), pledging support for "the establishment in Palestine of a national home for the Jewish people." Both commitments came from the same Foreign Office under Foreign Secretary Arthur Balfour, and both were drafted and negotiated by overlapping personnel — Sir Mark Sykes, Sir Percy Cox, T. E. Lawrence — operating in a single coordinated wartime project to dismember the Ottoman Empire.</p>
+  <p>The two undertakings shared a precondition: the destruction of the Ottoman Caliphate. So long as a single Sunnī Islamic political authority guarded the Holy Cities of the Hijāz and the Mosque of al-Aqṣā, neither a fragmented Arabian peninsula nor a European-settler project in Palestine was politically realisable. Britain's wartime commitments — with ibn Saʿūd in Najd, the Hashemites in Hijāz, the Zionist movement for Palestine, the French via Sykes–Picot — together produced exactly that fragmentation. The Treaty of Sèvres (1920) and the abolition of the Caliphate by the Turkish Republic in 1924 finished the job the wartime correspondence had begun.</p>
+  <p>This is not a claim that the eighteenth-century Najdī movement was itself Zionist; political Zionism did not yet exist in Muhammad ibn ʿAbd al-Wahhāb's lifetime. It is a claim about the twentieth-century container in which Wahhābī-Salafism became a global movement: the same imperial machinery that funded ibn Saʿūd cleared the political ground that the Zionist project then occupied. Both have continued to coexist with the modern Saudi state — including the public normalisation moves between Saudi Arabia and Israel under Crown Prince Muhammad bin Salmān.</p>
+
+  <h3>The "Hempher memoirs" question</h3>
+  <p>A widely circulated text in traditional Sunnī polemical literature — <em>Confessions of a British Spy</em> — purports to be the memoirs of "Mr. Hempher," a British agent allegedly dispatched to corrupt Muhammad ibn ʿAbd al-Wahhāb and seed the Wahhābī movement. The text is taken seriously by some traditional scholars and dismissed by most academic historians as a 20th-century forgery; its earliest documented circulation is Ottoman-Turkish from the late 1800s, and the version popular today appeared in the 1970s. The documented British–Saudi relationship does not depend on Hempher's authenticity — the treaties above are sufficient on their own.</p>
+
+  <h3>Modern Salafism (post-1900)</h3>
+  <p>The 20th-century globalisation of Salafism owes less to the original Najdī movement and more to two pivots. The first is <strong>Muhammad Rashīd Riḍā</strong> (d. 1935), an Egyptian reformer whose journal <em>al-Manār</em> reframed Wahhābī creed for a modern Arab readership in the language of anti-colonial revival. The second is the <strong>post-1973 Saudi oil boom</strong>, which funded Salafī institutions, mosques, scholarships, and curricula worldwide on a scale unprecedented in Islamic history. The shape of contemporary global Salafism — its English-language preachers, its translation projects, its publishing — is in large part a Saudi state cultural-export project of the second half of the twentieth century.</p>
+
+  <h3>What follows from this</h3>
+  <p>None of this history settles the theology. A movement's politics can be ugly while its theology is sound, or vice versa; both have to be argued on their own terms. The other pages on this site argue the specific theological points (mawlid, group dhikr, ʿaqīdah, tawassul). This page is here so readers know what they are looking at: a self-consciously revivalist project from a specific time and place, not the spontaneous voice of "the Salaf" themselves.</p>
+
+  <h3>Further reading</h3>
+  <p class="reading">
+    Hamid Algar, <em>Wahhabism: A Critical Essay</em> (2002) — academic Sunnī critique. ·
+    David Commins, <em>The Wahhabi Mission and Saudi Arabia</em> (2006) — neutral academic history. ·
+    Madawi al-Rasheed, <em>A History of Saudi Arabia</em> (2010) — academic. ·
+    Yūsuf al-Nabhānī, <em>Shawāhid al-Ḥaqq fī al-Istighātha bi-Sayyid al-Khalq</em> (1905) — classical Ashʿarī refutation. ·
+    Aḥmad Zaynī Daḥlān, <em>Fitnat al-Wahhābiyyah</em> (1888) — Mecca-mufti's contemporary refutation.
+  </p>
+
+  <p class="cta">→ <a href="/topics">Browse the refutations on specific topics</a></p>
 </Base>
 
 <style>
-  .lede { margin-bottom: 24px; }
-  .section-label {
-    font-family: var(--sans);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    margin: 24px 0 8px;
+  .ar-title { font-family: var(--arabic); font-size: 18px; color: var(--navy); margin-bottom: 4px; font-weight: 700; }
+  h2 { margin: 0 0 8px; }
+  .summary { font-style: italic; color: var(--ink-secondary); margin-bottom: 22px; }
+  strong { font-weight: 600; color: var(--navy); }
+  .reading { font-size: 14px; }
+  .cta {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule-warm);
+    font-size: 16px;
   }
-  .topics { margin-top: 8px; padding: 0; list-style: none; }
+  .cta a { color: var(--navy-link); font-weight: 600; }
 </style>
