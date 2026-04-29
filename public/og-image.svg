@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f9f5ec"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#c9a14a"/>
+  <text x="600" y="280" text-anchor="middle" font-family="Amiri, Georgia, serif" font-size="120" font-weight="700" fill="#1f2c4a">دار الحق</text>
+  <text x="600" y="380" text-anchor="middle" font-family="-apple-system, Helvetica, sans-serif" font-size="64" font-weight="600" fill="#1f2c4a">Dār al-Ḥaqq</text>
+  <text x="600" y="440" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="28" fill="#5a5040">Traditional Sunni Islam — the ʿaqīdah of the Salaf, the four madhāhib</text>
+  <rect x="0" y="622" width="1200" height="8" fill="#c9a14a"/>
+</svg>
