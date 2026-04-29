@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import Quote from '../../components/Quote.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const topics = await getCollection('topics');
+  return topics.map(topic => ({
+    params: { slug: topic.slug },
+    props: { topic },
+  }));
+}
+
+interface Props { topic: CollectionEntry<'topics'>; }
+
+const { topic } = Astro.props;
+const { Content } = await topic.render();
+const { title, arabicTitle, summary, sources, updated } = topic.data;
+---
+<Base title={title} description={summary} compactHeader={true}>
+  <p class="crumb"><a href="/">Topics</a> &rsaquo; {title}</p>
+
+  {arabicTitle && <p class="arabic topic-ar">{arabicTitle}</p>}
+  <h2>{title}</h2>
+  <p class="summary">{summary}</p>
+
+  <article class="prose">
+    <Content />
+  </article>
+
+  <h3>Sources</h3>
+  <div class="sources">
+    {sources.map(s => (
+      <Quote author={s.author} site={s.site} url={s.url} excerpt={s.excerpt} />
+    ))}
+  </div>
+
+  <h3>Read the full answers</h3>
+  <p class="readall">
+    {sources.map((s, i) => (
+      <>
+        <a href={s.url} rel="noopener external">{s.site} — {s.author}</a>
+        {i < sources.length - 1 ? ' · ' : ''}
+      </>
+    ))}
+  </p>
+
+  <p class="updated">Last updated {updated}</p>
+</Base>
+
+<style>
+  .crumb { font-family: var(--sans); font-size: 12px; color: var(--ink-tertiary); margin-bottom: 8px; }
+  .crumb a { color: var(--navy-link); }
+  .topic-ar { font-size: 18px; color: var(--navy); margin-bottom: 4px; font-weight: 700; }
+  h2 { margin: 0 0 8px; }
+  .summary { font-style: italic; color: var(--ink-secondary); margin-bottom: 22px; }
+  .prose :global(h3) { color: var(--gold-dim); }
+  .prose :global(p)  { margin: 0 0 14px; }
+  .prose :global(em) { color: var(--ink-secondary); }
+  .readall { font-family: var(--sans); font-size: 14px; }
+  .updated { font-family: var(--sans); font-size: 12px; color: var(--ink-tertiary); margin-top: 32px; }
+</style>
