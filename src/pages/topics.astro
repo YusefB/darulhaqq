@@ -7,7 +7,7 @@ const topics = (await getCollection('topics')).sort((a, b) => a.data.order - b.d
 ---
 <Base title="Topics" compactHeader={true}>
   <h2>Topics</h2>
-  <p class="lede">Refutations of common Salafī claims, anchored in the Qurʾān and the Sunnah.</p>
+  <p class="lede">Contested questions in modern Sunnī Islam — the Salafī and classical Sunnī positions on each, with verbatim citations from both sides.</p>
   <ul class="topics">
     {topics.map(topic => <TopicRow topic={topic} />)}
   </ul>
