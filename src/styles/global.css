@@ -83,3 +83,82 @@ em, i { color: var(--ink-secondary); }
   direction: rtl;
   unicode-bidi: isolate;
 }
+
+/* === Footnotes (GFM output via remark-gfm) === */
+.prose sup a[href^="#user-content-fn-"],
+.prose sup a[data-footnote-ref],
+.content sup a[href^="#user-content-fn-"],
+.content sup a[data-footnote-ref] {
+  font-family: var(--sans);
+  font-size: 0.75em;
+  color: var(--navy-link);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 1px;
+  vertical-align: super;
+  line-height: 0;
+}
+.prose sup a[href^="#user-content-fn-"]:hover,
+.prose sup a[data-footnote-ref]:hover,
+.content sup a[href^="#user-content-fn-"]:hover,
+.content sup a[data-footnote-ref]:hover {
+  text-decoration: underline;
+}
+
+.prose section.footnotes,
+.prose [data-footnotes],
+.content section.footnotes,
+.content [data-footnotes] {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule-warm);
+  font-size: 14px;
+  color: var(--ink-secondary);
+}
+
+.prose section.footnotes h2,
+.prose [data-footnotes] h2,
+.content section.footnotes h2,
+.content [data-footnotes] h2 {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.prose section.footnotes ol,
+.prose [data-footnotes] ol,
+.content section.footnotes ol,
+.content [data-footnotes] ol {
+  padding-left: 22px;
+  margin: 0;
+}
+
+.prose section.footnotes li,
+.prose [data-footnotes] li,
+.content section.footnotes li,
+.content [data-footnotes] li {
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+.prose section.footnotes li p,
+.prose [data-footnotes] li p,
+.content section.footnotes li p,
+.content [data-footnotes] li p {
+  margin: 0;
+  display: inline;
+}
+
+.prose section.footnotes a[data-footnote-backref],
+.prose [data-footnotes] a[data-footnote-backref],
+.content section.footnotes a[data-footnote-backref],
+.content [data-footnotes] a[data-footnote-backref] {
+  color: var(--gold-dim);
+  text-decoration: none;
+  margin-left: 4px;
+  font-family: var(--sans);
+}
